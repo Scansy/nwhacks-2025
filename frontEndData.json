@@ -1,20 +1,255 @@
-[
-    {
+{
+    "HTML": {
       "ID": 1,
       "NodeName": "HTML",
-      "Description": "Root HTML node",
-      "SubItems": [
-        { "ID": 101, "NodeName": "p", "Description": "Paragraph tag" },
-        { "ID": 102, "NodeName": "form", "Description": "Form tag" }
-      ]
+      "Description": "A skill tree covering various aspects of HTML mastery.",
+      "Subitems": {
+        "HTML Basics": {
+          "ID": 101,
+          "NodeName": "HTML Basics",
+          "Description": "Covers the foundational elements of HTML.",
+          "Subitems": [
+            { "ID": 102, "NodeName": "Basic Structure", "Description": "Understanding the basic structure: <html>, <head>, <body>." },
+            { "ID": 103, "NodeName": "Common Tags", "Description": "Using common tags: <p>, <h1>-<h6>, <div>, <span>, <a>, <img>." },
+            { "ID": 104, "NodeName": "Attributes", "Description": "Proper use of attributes: id, class, href, src, alt." },
+            { "ID": 105, "NodeName": "Nesting", "Description": "Nesting elements correctly and understanding document flow." },
+            { "ID": 106, "NodeName": "Text Formatting", "Description": "Working with basic text formatting tags: <b>, <i>, <u>, <strong>, <em>." }
+          ]
+        },
+        "Semantic HTML": {
+          "ID": 201,
+          "NodeName": "Semantic HTML",
+          "Description": "Focuses on writing meaningful and structured HTML.",
+          "Subitems": [
+            { "ID": 202, "NodeName": "Purpose of Semantic Tags", "Description": "Understanding the purpose of semantic tags." },
+            { "ID": 203, "NodeName": "Structural Tags", "Description": "Using structural tags: <header>, <footer>, <main>, <section>, <article>, <nav>." },
+            { "ID": 204, "NodeName": "Inline Semantics", "Description": "Employing inline semantics: <time>, <mark>, <abbr>, <cite>, <q>." },
+            { "ID": 205, "NodeName": "Semantic vs Non-semantic", "Description": "Differentiating between <div>/<span> and semantic equivalents." },
+            { "ID": 206, "NodeName": "Layout Design", "Description": "Designing a layout with semantic meaning in mind." }
+          ]
+        },
+        "Forms and Validations": {
+          "ID": 301,
+          "NodeName": "Forms and Validations",
+          "Description": "Focuses on creating and validating forms.",
+          "Subitems": [
+            { "ID": 302, "NodeName": "Basic Forms", "Description": "Creating basic forms with <form>, <input>, <textarea>, <button>." },
+            { "ID": 303, "NodeName": "Form Attributes", "Description": "Working with form attributes: action, method, target, autocomplete." },
+            { "ID": 304, "NodeName": "Input Types", "Description": "Understanding input types: text, password, email, number, date, file, checkbox, radio." },
+            { "ID": 305, "NodeName": "Validation Attributes", "Description": "Utilizing form validation attributes: required, pattern, min, max, maxlength, step." },
+            { "ID": 306, "NodeName": "Accessible Forms", "Description": "Building forms with accessible error messages and labels." }
+          ]
+        },
+        "Accessibility": {
+          "ID": 401,
+          "NodeName": "Accessibility",
+          "Description": "Ensures web content is accessible to all users.",
+          "Subitems": [
+            { "ID": 402, "NodeName": "Alternative Text", "Description": "Adding alternative text to images (alt attribute)." },
+            { "ID": 403, "NodeName": "Screen Readers", "Description": "Structuring content for screen readers with role and ARIA attributes." },
+            { "ID": 404, "NodeName": "Navigation Techniques", "Description": "Using accessible navigation techniques: tabindex, skip links." },
+            { "ID": 405, "NodeName": "Focus States", "Description": "Creating focus states and ensuring keyboard navigability." },
+            { "ID": 406, "NodeName": "Content Readability", "Description": "Structuring content for readability with proper heading levels and landmarks." }
+          ]
+        },
+        "Media Integration": {
+          "ID": 501,
+          "NodeName": "Media Integration",
+          "Description": "Focuses on integrating and optimizing media content.",
+          "Subitems": [
+            { "ID": 502, "NodeName": "Embedding Images", "Description": "Embedding images with <img> and understanding responsive images: srcset, sizes." },
+            { "ID": 503, "NodeName": "Audio", "Description": "Adding audio with <audio>." },
+            { "ID": 504, "NodeName": "Video", "Description": "Adding video with <video>." },
+            { "ID": 505, "NodeName": "Responsive Images", "Description": "Using <picture> for advanced responsive images." },
+            { "ID": 506, "NodeName": "Iframes", "Description": "Working with iframe content using <iframe>." },
+            { "ID": 507, "NodeName": "Media Performance", "Description": "Understanding the implications of media performance (lazy loading, formats)." }
+          ]
+        },
+        "SEO Fundamentals": {
+          "ID": 601,
+          "NodeName": "SEO Fundamentals",
+          "Description": "Covers foundational techniques for search engine optimization.",
+          "Subitems": [
+            { "ID": 602, "NodeName": "Page Structure", "Description": "Structuring pages with <title> and <meta> tags." },
+            { "ID": 603, "NodeName": "Headings", "Description": "Using headings <h1>-<h6> properly for content hierarchy." },
+            { "ID": 604, "NodeName": "Canonical URLs", "Description": "Creating canonical URLs and avoiding duplicate content issues." },
+            { "ID": 605, "NodeName": "Metadata", "Description": "Adding Open Graph and Twitter Card metadata." },
+            { "ID": 606, "NodeName": "Structured Data", "Description": "Using structured data (<script type=\"application/ld+json\">) for rich results." }
+          ]
+        },
+        "Advanced HTML Techniques": {
+          "ID": 701,
+          "NodeName": "Advanced HTML Techniques",
+          "Description": "Explores advanced concepts and techniques in HTML.",
+          "Subitems": [
+            { "ID": 702, "NodeName": "Templates and Slots", "Description": "Creating and using <template> and <slot> for web components." },
+            { "ID": 703, "NodeName": "Custom Data Attributes", "Description": "Implementing custom data attributes (data-*)." },
+            { "ID": 704, "NodeName": "Dialogs", "Description": "Using <dialog> for modals and interactive elements." },
+            { "ID": 705, "NodeName": "Shadow DOM", "Description": "Understanding shadow DOM and encapsulation basics." },
+            { "ID": 706, "NodeName": "Progressive Enhancement", "Description": "Applying best practices for future-proof HTML." }
+          ]
+        }
+      }
     },
-    {
-      "ID": ,
-      "NodeName":,
-      "Description": ,
-      "SubItems": []
-    }
-  ]
+
+        "CSS": {
+          "ID": 1,
+          "NodeName": "CSS",
+          "Description": "A skill tree covering mastery of CSS for web design and development.",
+          "Subitems": {
+            "CSS Basics": {
+              "ID": 101,
+              "NodeName": "CSS Basics",
+              "Description": "Covers the foundational elements of CSS.",
+              "Subitems": [
+                { "ID": 102, "NodeName": "Syntax", "Description": "Understanding the syntax: selectors, properties, and values." },
+                { "ID": 103, "NodeName": "Basic Selectors", "Description": "Using basic selectors: type, class, ID, universal (*)" },
+                { "ID": 104, "NodeName": "Common Properties", "Description": "Applying common properties: color, background-color, font-size, margin, padding, border." },
+                { "ID": 105, "NodeName": "Box Model", "Description": "Understanding the box model (content, padding, border, margin)." },
+                { "ID": 106, "NodeName": "Linking CSS", "Description": "Linking CSS to HTML using <link> and <style>." }
+              ]
+            },
+            "Selectors Mastery": {
+              "ID": 201,
+              "NodeName": "Selectors Mastery",
+              "Description": "Focuses on mastering CSS selectors for precise styling.",
+              "Subitems": [
+                { "ID": 202, "NodeName": "Combinators", "Description": "Using combinators: descendant ( ), child (>), adjacent sibling (+), general sibling (~)." },
+                { "ID": 203, "NodeName": "Attribute Selectors", "Description": "Mastering attribute selectors: [type='text'], [type^='a'], [type$='z'], [type*='e']." },
+                { "ID": 204, "NodeName": "Pseudo-Classes", "Description": "Working with pseudo-classes: :hover, :focus, :nth-child(), :nth-of-type()." },
+                { "ID": 205, "NodeName": "Pseudo-Elements", "Description": "Leveraging pseudo-elements: ::before, ::after, ::marker." },
+                { "ID": 206, "NodeName": "Efficient Selectors", "Description": "Writing specific and efficient selectors to avoid conflicts." }
+              ]
+            },
+            "Box Model and Layout": {
+              "ID": 301,
+              "NodeName": "Box Model and Layout",
+              "Description": "Explores layout fundamentals and the CSS box model.",
+              "Subitems": [
+                { "ID": 302, "NodeName": "Dimensions", "Description": "Understanding width, height, max-width, max-height, min-width, min-height." },
+                { "ID": 303, "NodeName": "Overflow", "Description": "Controlling overflow: overflow, overflow-x, overflow-y." },
+                { "ID": 304, "NodeName": "Box Sizing", "Description": "Applying box-sizing for predictable dimensions." },
+                { "ID": 305, "NodeName": "Spacing", "Description": "Using margins, padding, and borders effectively." },
+                { "ID": 306, "NodeName": "Floats and Display", "Description": "Clearing floats and understanding block vs. inline elements." }
+              ]
+            },
+            "Typography": {
+              "ID": 401,
+              "NodeName": "Typography",
+              "Description": "Covers font and text styling techniques.",
+              "Subitems": [
+                { "ID": 402, "NodeName": "Font Properties", "Description": "Setting font properties: font-family, font-size, font-weight, font-style." },
+                { "ID": 403, "NodeName": "Text Spacing", "Description": "Controlling text spacing: letter-spacing, line-height, word-spacing." },
+                { "ID": 404, "NodeName": "Text Alignment", "Description": "Aligning text with text-align and vertical-align." },
+                { "ID": 405, "NodeName": "Decorative Styles", "Description": "Applying decorative styles: text-transform, text-shadow, text-decoration." },
+                { "ID": 406, "NodeName": "Web Fonts", "Description": "Using web fonts with @font-face or services like Google Fonts." }
+              ]
+            },
+            "Positioning": {
+              "ID": 501,
+              "NodeName": "Positioning",
+              "Description": "Focuses on positioning elements on the page.",
+              "Subitems": [
+                { "ID": 502, "NodeName": "Position Values", "Description": "Mastering position values: static, relative, absolute, fixed, sticky." },
+                { "ID": 503, "NodeName": "Z-Index", "Description": "Controlling z-index and stacking context." },
+                { "ID": 504, "NodeName": "Positioning Properties", "Description": "Using top, right, bottom, left to position elements." },
+                { "ID": 505, "NodeName": "Transforms", "Description": "Combining positioning with transforms." },
+                { "ID": 506, "NodeName": "Nested Contexts", "Description": "Understanding relative positioning contexts for nested elements." }
+              ]
+            },
+            "Flexbox": {
+              "ID": 601,
+              "NodeName": "Flexbox",
+              "Description": "Covers CSS Flexbox for creating flexible layouts.",
+              "Subitems": [
+                { "ID": 602, "NodeName": "Flex Containers", "Description": "Defining flex containers and items: display: flex." },
+                { "ID": 603, "NodeName": "Alignment", "Description": "Aligning items: justify-content, align-items, align-self." },
+                { "ID": 604, "NodeName": "Flex Wrapping", "Description": "Wrapping elements: flex-wrap and flex-flow." },
+                { "ID": 605, "NodeName": "Proportions", "Description": "Controlling proportions: flex-grow, flex-shrink, flex-basis." },
+                { "ID": 606, "NodeName": "Layout Building", "Description": "Building layouts with cross-axis and main-axis alignment." }
+              ]
+            },
+            "Grid Layout": {
+              "ID": 701,
+              "NodeName": "Grid Layout",
+              "Description": "Explores CSS Grid for advanced layouts.",
+              "Subitems": [
+                { "ID": 702, "NodeName": "Grid Setup", "Description": "Setting up grids with display: grid." },
+                { "ID": 703, "NodeName": "Grid Tracks", "Description": "Defining grid tracks: grid-template-rows, grid-template-columns." },
+                { "ID": 704, "NodeName": "Placing Items", "Description": "Placing items with grid-area and shorthand notations." },
+                { "ID": 705, "NodeName": "Alignment", "Description": "Aligning items: align-content, justify-content, place-items." },
+                { "ID": 706, "NodeName": "Spacing", "Description": "Using grid gaps and fr units for spacing." }
+              ]
+            },
+            "Responsive Design": {
+              "ID": 801,
+              "NodeName": "Responsive Design",
+              "Description": "Covers techniques for creating responsive web designs.",
+              "Subitems": [
+                { "ID": 802, "NodeName": "Media Queries", "Description": "Understanding and using media queries: @media." },
+                { "ID": 803, "NodeName": "Fluid Layouts", "Description": "Creating fluid layouts with percentages, vh, vw, and calc()." },
+                { "ID": 804, "NodeName": "Breakpoints", "Description": "Working with breakpoints for different screen sizes." },
+                { "ID": 805, "NodeName": "Scaling", "Description": "Using min, max, and clamp() for responsive scaling." },
+                { "ID": 806, "NodeName": "Combined Techniques", "Description": "Combining Flexbox and Grid for adaptive layouts." }
+              ]
+            },
+            "CSS Variables and Custom Properties": {
+              "ID": 901,
+              "NodeName": "CSS Variables and Custom Properties",
+              "Description": "Focuses on leveraging custom properties in CSS.",
+              "Subitems": [
+                { "ID": 902, "NodeName": "Declaring Variables", "Description": "Declaring and using custom properties: --main-color, var(--main-color)." },
+                { "ID": 903, "NodeName": "Variable Scopes", "Description": "Defining variable scopes (global vs. local)." },
+                { "ID": 904, "NodeName": "Dynamic Themes", "Description": "Creating dynamic themes with variables." },
+                { "ID": 905, "NodeName": "Advanced Styling", "Description": "Combining variables with calc() for advanced styling." },
+                { "ID": 906, "NodeName": "Fallback Values", "Description": "Managing fallback values for older browsers." }
+              ]
+            },
+            "Advanced Styling": {
+              "ID": 1001,
+              "NodeName": "Advanced Styling",
+              "Description": "Covers advanced styling techniques and effects.",
+              "Subitems": [
+                { "ID": 1002, "NodeName": "Transitions", "Description": "Creating transitions with transition and easing functions." },
+                { "ID": 1003, "NodeName": "Animations", "Description": "Animating elements with @keyframes and animation." },
+                { "ID": 1004, "NodeName": "Filters", "Description": "Applying filters: blur, brightness, contrast, drop-shadow." },
+                { "ID": 1005, "NodeName": "Clipping and Masking", "Description": "Using clipping and masking: clip-path, mask." },
+                { "ID": 1006, "NodeName": "Parallax Effects", "Description": "Implementing parallax effects with background properties." }
+              ]
+            },
+            "Preprocessors and Frameworks": {
+              "ID": 1101,
+              "NodeName": "Preprocessors and Frameworks",
+              "Description": "Explores preprocessors like Sass/SCSS and frameworks like Bootstrap.",
+              "Subitems": [
+                { "ID": 1102, "NodeName": "Preprocessors Syntax", "Description": "Understanding the syntax of preprocessors like Sass/SCSS or Less." },
+                { "ID": 1103, "NodeName": "Preprocessor Features", "Description": "Using nested rules, variables, mixins, and partials." },
+                { "ID": 1104, "NodeName": "Compilation", "Description": "Compiling preprocessors into CSS." },
+                { "ID": 1105, "NodeName": "Utility Frameworks", "Description": "Leveraging utility classes with frameworks like Tailwind or Bootstrap." },
+                { "ID": 1106, "NodeName": "Integration", "Description": "Integrating preprocessors or frameworks into a build pipeline." }
+              ]
+            }
+          }
+        }
+      }
+      
+
+    //javascript
+    //Version Control
+    //Responsive Design
+    //Web performance optimization
+    //Accesibility
+    //Frameworks and Libraries
+    //Tooling - package managers
+    //mobile
+
+
+
+
+
+
+  }
+  
   
 
 
