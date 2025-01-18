@@ -11,14 +11,23 @@ import {
 import '@xyflow/react/dist/style.css';
 import frontendData from '../frontenddata.json';
 
-const mapDataToNodes = (data) => {
+const mapDataToNodesAndEdges = (data) => {
   const nodes = [];
+  const edges = [];
   const traverse = (item, parentId = null) => {
     nodes.push({
       id: item.ID.toString(),
       position: { x: Math.random() * 400, y: Math.random() * 400 },
       data: { label: item.NodeName },
     });
+    if (parentId) {
+      edges.push({
+        id: `e${parentId}-${item.ID}`,
+        source: parentId.toString(),
+        target: item.ID.toString(),
+        style: { stroke: 'red' },
+      });
+    }
     if (item.Subitems) {
       if (Array.isArray(item.Subitems)) {
         item.Subitems.forEach(subitem => traverse(subitem, item.ID));
@@ -28,7 +37,7 @@ const mapDataToNodes = (data) => {
     }
   };
   traverse(data.HTML);
-  return nodes;
+  return { nodes, edges };
 };
 
 export default function App() {
@@ -36,9 +45,10 @@ export default function App() {
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 
   useEffect(() => {
-    const initialNodes = mapDataToNodes(frontendData);
-    setNodes(initialNodes);
-  }, [setNodes]);
+    const { nodes, edges } = mapDataToNodesAndEdges(frontendData);
+    setNodes(nodes);
+    setEdges(edges);
+  }, [setNodes, setEdges]);
 
   const onConnect = useCallback(
     (params) => setEdges((eds) => addEdge(params, eds)),
