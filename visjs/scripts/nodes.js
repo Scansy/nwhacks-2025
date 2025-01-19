@@ -8,9 +8,7 @@ function generateNodes(data) {
             id: item.ID,
             label: item.NodeName,
             title: item.Description,
-            fixed: true,
-            x: Math.random() * 800, // Random x position within a range
-            y: Math.random() * 600  // Random y position within a range
+            fixed: true
         });
     });
 
