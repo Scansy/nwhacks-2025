@@ -176,6 +176,14 @@ nodes.update({
     label: false,
     shadow:false
   });
+  nodes.update({
+    id: 424,
+    shape: 'image',
+    image: 'images/DevOps.png',
+    size: 30, // controls image size in pixels
+    label: false,
+    shadow:false
+  });
 
 var options = {
     interaction: {
