@@ -68,6 +68,7 @@ var options = {
     physics: false,
 };
 
+var completedNodes = [];
 
 // initialize your network!
 var network = new vis.Network(container, data, options);
@@ -100,7 +101,7 @@ var network = new vis.Network(container, data, options);
 
         // Add event listeners to the buttons
         document.getElementById('completeButton').addEventListener('click', function () {
-            //add completed nodes to global completed skills array
+            //add completed nodes id copy to global completed skills array
             completedNodes.push(nodeId);
             nodes.update({ id: nodeId, color: { background: 'lightgreen' } });
             floatingInfo.style.display = "none";
@@ -113,6 +114,8 @@ var network = new vis.Network(container, data, options);
                     }
                 }
             });
+            //display on bottom right number of completed nodes out of total nodes
+            progress.innerHTML = `${completedNodes.length} / ${nodes.length}`;
         });
 
         document.getElementById('inProgressButton').addEventListener('click', function () {
@@ -158,5 +161,6 @@ var network = new vis.Network(container, data, options);
 
 // Modify the user's node
 nodes.update({ id: -1, color: { background: 'black' } });
+
 
 export default nodes;
