@@ -1,5 +1,5 @@
 function generateLink(completedNodes) {
-    const baseUrl = 'zanzigzan-app--8080.prod1b.defang.dev';
+    const baseUrl = 'zanzigzan-app--8080.prod1b.defang.dev/';
 
     if (completedNodes.length === 0) {
         return baseUrl;
