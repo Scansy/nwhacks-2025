@@ -22,6 +22,7 @@ for (let i = 201; i < 301; i++) {
         devopsId.push(i)
 }
 
+// highlight roadmap nodes based on discipline
 document.getElementById("roadmapBox").addEventListener("change", () => {
     clearHighlight();
     let rmNodeCount = document.querySelector("#roadmap")
@@ -39,7 +40,7 @@ document.getElementById("roadmapBox").addEventListener("change", () => {
         });
     } else if (val === "Backend") {
         backendId.forEach(id => {
-            nodes.update({ id: id, color: { background: 'lightblue', border: 'blue' }, shadow: {enabled: true, color: "rgba(39, 143, 245, 1)", size: 100}, borderWidth: 2});
+            nodes.update({ id: id, color: { background: '#c393db', border: '#871abd' }, shadow: {enabled: true, color: "rgb(193, 21, 220)", size: 100}, borderWidth: 2});
             if (completedNodes.includes(id)) {
                 nodes.update({ id: id, color: { background: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
             }
@@ -49,7 +50,7 @@ document.getElementById("roadmapBox").addEventListener("change", () => {
         });
     } else if (val === "DevOps") {
         devopsId.forEach(id => {
-            nodes.update({ id: id, color: { background: 'lightblue', border: 'blue' }, shadow: {enabled: true, color: "rgba(39, 143, 245, 1)", size: 100}, borderWidth: 2});
+            nodes.update({ id: id, color: { background: '#d65858', border: '#800000' }, shadow: {enabled: true, color: "rgb(228, 15, 15)", size: 100}, borderWidth: 2});
             if (completedNodes.includes(id)) {
                 nodes.update({ id: id, color: { background: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
             }
@@ -67,6 +68,14 @@ document.getElementById("roadmapBox").addEventListener("change", () => {
 
 function clearHighlight() {
     nodeIds.forEach(id => {
+        if (nodeIds.includes(id) && !completedNodes.includes(id)) {
+            if (frontendId.includes(id)) {
+                nodes.update({ id: id, color: { background: '#2596be' }, shadow: {enabled: false}, borderWidth: 1});
+            } else if (backendId.includes(id)) {
+                nodes.update({ id: id, color: { background: '#be3bff' }, shadow: {enabled: false}, borderWidth: 1});
+            } else if (devopsId.includes(id)) {
+                nodes.update({ id: id, color: { background: '#e60707' }, shadow: {enabled: false}, borderWidth: 1});
+            }
         if (nodeIds.includes(id) && !completedNodes.includes(id) && !inProgressNodes.includes(id)) {
             nodes.update({ id: id, color: { background: '#2596be' }, shadow: {enabled: false}, borderWidth: 1});
         }

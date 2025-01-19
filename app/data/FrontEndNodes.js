@@ -1,10 +1,12 @@
 const data = [
+  // Frontend
   {
     "ID": -1,
     "NodeName": "User",
     "Description": "Represents a user's skill tree.",
     "x": 34,
-    "y": 6
+    "y": 6,
+    "discipline": "Frontend"
   },
   {
     "ID": 1,
@@ -196,13 +198,15 @@ const data = [
     "x": 264,
     "y": 239
   },
+  // DevOps
   {
     "ID": 201,
     "NodeName": "Docker",
     "Description": "Introduces Docker for containerizing applications.",
     "from": -1,
     "x": -48,
-    "y": -127
+    "y": -127,
+    "discipline": "DevOps"
   },
   {
     "ID": 202,
@@ -210,7 +214,8 @@ const data = [
     "Description": "Covers Kubernetes for container orchestration and deployment management.",
     "from": 201,
     "x": -270,
-    "y": -495
+    "y": -495,
+    "discipline": "DevOps"
   },
   {
     "ID": 208,
@@ -274,7 +279,8 @@ const data = [
     "Description": "Introduces Terraform for infrastructure as code and automation.",
     "from": 202,
     "x": -136,
-    "y": -653
+    "y": -653,
+    "discipline": "DevOps"
   },
   {
     "ID": 217,
@@ -298,7 +304,6 @@ const data = [
     "x": 786,
     "y": -48
   }
-
 ];
 
 export default data;

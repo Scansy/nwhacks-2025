@@ -208,17 +208,14 @@ var options = {
     nodes: {
         shape: "dot",
         size: 16,
-        borderWidth: 3,
-        shadow: true
+        borderWidth: 2,
+        shadow: true,
+        font: { color: "black" }
     },
     groups: {
-        frontend: {
-            shape: "dot",
-            color: { background: "#2596be", border: "#2180A3" },
-            font: { color: "black" },
-            borderWidth: 2,
-            shadow: true,
-        },
+        Frontend: { color: { background: '#2596be', border: '#2180A3' } },
+        Backend: { color: { background: '#be3bff', border: '#7c00ba' } },
+        DevOps: { color: { background: '#e60707', border: '#4D0000' } }
     },
     physics: false,
     
@@ -228,6 +225,7 @@ var completedNodes = [];
 var inProgressNodes = [];
 // Initialize network
 var network = new vis.Network(container, data, options);
+// colorCodeNodes();
 
 // Event listener for node clicks
 network.on("click", function (params) {
@@ -303,6 +301,27 @@ network.on("dragEnd", function (params) {
 
 // Set initial user node color
 nodes.update({ id: -1, color: { background: 'black' } });
+
+// color code nodes
+// function colorCodeNodes() {
+//     const allNodes = nodes.get();
+    
+//     allNodes.forEach((node) => {
+//         console.log(`Processing node ${node.id}:`, {
+//             group: node.group,
+//             currentColor: node.color
+//         });
+        
+//         let newColor = null;
+//         if (node.group === "Frontend") {
+//             newColor = { background: '#2596be', border: '#2180A3' };
+//         } else if (node.group === 'Backend') {
+//             newColor = { background: '#9932CC', border: '#1e3333' };
+//         } else if (node.group === 'DevOps') {
+//             newColor = { background: '#800000', border: '#4D0000' };
+//         }
+//     });
+// }
 
 window.onload = function () {
     let savedData = loadFromClipboardShare();
