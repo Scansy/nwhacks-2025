@@ -3,7 +3,7 @@ import nodeData from './nodeData.js';
 function generateNodes(data) {
     const generatedNodes = [];
 
-    data.forEach((item, index) => {
+    data.forEach((item) => {
         generatedNodes.push({
             id: item.ID,
             label: item.NodeName,
