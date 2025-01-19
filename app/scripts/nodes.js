@@ -266,14 +266,13 @@ network.on("click", function (params) {
 
             // display on bottom right number of completed nodes out of total nodes
             let progress = document.querySelector("#total");
-            progress.innerHTML = `Total: ${completedNodes.length} / ${nodes.length}`;
+            progress.innerHTML = `Total: ${completedNodes.length-1} / ${nodes.length-1}`;
         });
 
         document.getElementById('inProgressButton').addEventListener('click', function () {
             inProgressNodes.push(nodeId);
             nodes.update({ id: nodeId, color: { background: 'orange', highlight: 'Orange' } });
             floatingInfo.style.display = "none";
-
         });
 
         document.getElementById('removeButton').addEventListener('click', function () {
@@ -300,7 +299,8 @@ network.on("dragEnd", function (params) {
 });
 
 // Set initial user node color
-nodes.update({ id: -1, color: { background: 'black' } });
+nodes.update({ id: -1, color: { background: 'lightgreen' } });
+completedNodes.push(-1);
 
 // color code nodes
 // function colorCodeNodes() {
