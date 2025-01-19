@@ -390,7 +390,7 @@ network.on("dragEnd", function (params) {
 });
 
 // Set initial user node color
-nodes.update({ id: -1, color: { background: 'lightgreen' }, shape: 'circularImage', image: 'images/user-icon.svg', size: 50 });
+nodes.update({ id: -1, color: { background: 'lightgreen' }, shape: 'circularImage', image: 'images/peace.png', imagePadding: 10, size: 50 });
 completedNodes.push(-1);
 
 
