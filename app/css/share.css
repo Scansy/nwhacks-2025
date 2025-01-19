@@ -2,17 +2,26 @@
     position: absolute;
     bottom: 3vh;
     left: 3vh;
+}
+
+#shareButton {
     background-color: #f8f9fa;
     border: 2px solid #dee2e6;
     border-radius: 8px;
     font-size: 16px;
     color: #495057;
+    padding: 10px 20px;
     outline: none;
     cursor: pointer;
     transition: all 0.3s ease;
+}
 
-    &:hover {
-        border-color: #adb5bd;
-        background-color: #e9ecef;
-    }
+#shareButton:hover {
+    border-color: #adb5bd;
+    background-color: #e9ecef;
+}
+
+#shareButton:active {
+    background-color: #dee2e6;
+    transform: scale(0.98);
 }
