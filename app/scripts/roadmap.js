@@ -5,22 +5,19 @@ const completedNodes = nodeData.completedNodes;
 const inProgressNodes = nodeData.inProgressNodes;
 
 const frontendId = [];
-for (let i = 1; i < 101; i++) {
-    if (nodeIds.includes(i))
-        frontendId.push(i)
-};
-
 const backendId= [];
-for (let i = 101; i < 201; i++) {
-    if (nodeIds.includes(i))
-        backendId.push(i)
-};
-
 const devopsId = [];
-for (let i = 201; i < 301; i++) {
-    if (nodeIds.includes(i))
-        devopsId.push(i)
-}
+nodes.forEach(node => {
+    if (nodeIds.includes(node.id)) {
+        if (node.group === "frontend") {
+            frontendId.push(node.id);
+        } else if (node.group === "backend") {
+            backendId.push(node.id);
+        } else {
+            devopsId.push(node.id);
+        }
+    }
+});
 
 // highlight roadmap nodes based on discipline
 document.getElementById("roadmapBox").addEventListener("change", () => {
@@ -76,6 +73,7 @@ function clearHighlight() {
             } else if (devopsId.includes(id)) {
                 nodes.update({ id: id, color: { background: '#e60707' }, shadow: {enabled: false}, borderWidth: 1});
             }
+        }
         if (nodeIds.includes(id) && !completedNodes.includes(id) && !inProgressNodes.includes(id)) {
             nodes.update({ id: id, color: { background: '#2596be' }, shadow: {enabled: false}, borderWidth: 1});
         }
