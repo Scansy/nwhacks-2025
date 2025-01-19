@@ -1,0 +1,1098 @@
+{
+  "HTML": {
+    "ID": "000001",
+    "NodeName": "HTML",
+    "Description": "A skill tree covering various aspects of HTML mastery.",
+    "Subitems": {
+      "HTML Basics": {
+        "ID": "000002",
+        "NodeName": "HTML Basics",
+        "Description": "Covers the foundational elements of HTML.",
+        "Subitems": [
+          {
+            "ID": "000003",
+            "NodeName": "Basic Structure",
+            "Description": "Understanding the basic structure: <html>, <head>, <body>."
+          },
+          {
+            "ID": "000004",
+            "NodeName": "Common Tags",
+            "Description": "Using common tags: <p>, <h1>-<h6>, <div>, <span>, <a>, <img>."
+          },
+          {
+            "ID": "000005",
+            "NodeName": "Attributes",
+            "Description": "Proper use of attributes: id, class, href, src, alt."
+          },
+          {
+            "ID": "000006",
+            "NodeName": "Nesting",
+            "Description": "Nesting elements correctly and understanding document flow."
+          },
+          {
+            "ID": "000007",
+            "NodeName": "Text Formatting",
+            "Description": "Working with basic text formatting tags: <b>, <i>, <u>, <strong>, <em>."
+          }
+        ]
+      },
+      "Semantic HTML": {
+        "ID": "000008",
+        "NodeName": "Semantic HTML",
+        "Description": "Focuses on writing meaningful and structured HTML.",
+        "Subitems": [
+          {
+            "ID": "000009",
+            "NodeName": "Purpose of Semantic Tags",
+            "Description": "Understanding the purpose of semantic tags."
+          },
+          {
+            "ID": "000010",
+            "NodeName": "Structural Tags",
+            "Description": "Using structural tags: <header>, <footer>, <main>, <section>, <article>, <nav>."
+          },
+          {
+            "ID": "000011",
+            "NodeName": "Inline Semantics",
+            "Description": "Employing inline semantics: <time>, <mark>, <abbr>, <cite>, <q>."
+          },
+          {
+            "ID": "000012",
+            "NodeName": "Semantic vs Non-semantic",
+            "Description": "Differentiating between <div>/<span> and semantic equivalents."
+          },
+          {
+            "ID": "000013",
+            "NodeName": "Layout Design",
+            "Description": "Designing a layout with semantic meaning in mind."
+          }
+        ]
+      },
+      "Forms and Validations": {
+        "ID": "000014",
+        "NodeName": "Forms and Validations",
+        "Description": "Focuses on creating and validating forms.",
+        "Subitems": [
+          {
+            "ID": "000015",
+            "NodeName": "Basic Forms",
+            "Description": "Creating basic forms with <form>, <input>, <textarea>, <button>."
+          },
+          {
+            "ID": "000016",
+            "NodeName": "Form Attributes",
+            "Description": "Working with form attributes: action, method, target, autocomplete."
+          },
+          {
+            "ID": "000017",
+            "NodeName": "Input Types",
+            "Description": "Understanding input types: text, password, email, number, date, file, checkbox, radio."
+          },
+          {
+            "ID": "000018",
+            "NodeName": "Validation Attributes",
+            "Description": "Utilizing form validation attributes: required, pattern, min, max, maxlength, step."
+          },
+          {
+            "ID": "000019",
+            "NodeName": "Accessible Forms",
+            "Description": "Building forms with accessible error messages and labels."
+          }
+        ]
+      },
+      "Accessibility": {
+        "ID": "000020",
+        "NodeName": "Accessibility",
+        "Description": "Ensures web content is accessible to all users.",
+        "Subitems": [
+          {
+            "ID": "000021",
+            "NodeName": "Alternative Text",
+            "Description": "Adding alternative text to images (alt attribute)."
+          },
+          {
+            "ID": "000022",
+            "NodeName": "Screen Readers",
+            "Description": "Structuring content for screen readers with role and ARIA attributes."
+          },
+          {
+            "ID": "000023",
+            "NodeName": "Navigation Techniques",
+            "Description": "Using accessible navigation techniques: tabindex, skip links."
+          },
+          {
+            "ID": "000024",
+            "NodeName": "Focus States",
+            "Description": "Creating focus states and ensuring keyboard navigability."
+          },
+          {
+            "ID": "000025",
+            "NodeName": "Content Readability",
+            "Description": "Structuring content for readability with proper heading levels and landmarks."
+          }
+        ]
+      },
+      "Media Integration": {
+        "ID": "000026",
+        "NodeName": "Media Integration",
+        "Description": "Focuses on integrating and optimizing media content.",
+        "Subitems": [
+          {
+            "ID": "000027",
+            "NodeName": "Embedding Images",
+            "Description": "Embedding images with <img> and understanding responsive images: srcset, sizes."
+          },
+          {
+            "ID": "000028",
+            "NodeName": "Audio",
+            "Description": "Adding audio with <audio>."
+          },
+          {
+            "ID": "000029",
+            "NodeName": "Video",
+            "Description": "Adding video with <video>."
+          },
+          {
+            "ID": "000030",
+            "NodeName": "Responsive Images",
+            "Description": "Using <picture> for advanced responsive images."
+          },
+          {
+            "ID": "000031",
+            "NodeName": "Iframes",
+            "Description": "Working with iframe content using <iframe>."
+          },
+          {
+            "ID": "000032",
+            "NodeName": "Media Performance",
+            "Description": "Understanding the implications of media performance (lazy loading, formats)."
+          }
+        ]
+      },
+      "SEO Fundamentals": {
+        "ID": "000033",
+        "NodeName": "SEO Fundamentals",
+        "Description": "Covers foundational techniques for search engine optimization.",
+        "Subitems": [
+          {
+            "ID": "000034",
+            "NodeName": "Page Structure",
+            "Description": "Structuring pages with <title> and <meta> tags."
+          },
+          {
+            "ID": "000035",
+            "NodeName": "Headings",
+            "Description": "Using headings <h1>-<h6> properly for content hierarchy."
+          },
+          {
+            "ID": "000036",
+            "NodeName": "Canonical URLs",
+            "Description": "Creating canonical URLs and avoiding duplicate content issues."
+          },
+          {
+            "ID": "000037",
+            "NodeName": "Metadata",
+            "Description": "Adding Open Graph and Twitter Card metadata."
+          },
+          {
+            "ID": "000038",
+            "NodeName": "Structured Data",
+            "Description": "Using structured data (<script type=\"application/ld+json\">) for rich results."
+          }
+        ]
+      },
+      "Advanced HTML Techniques": {
+        "ID": "000039",
+        "NodeName": "Advanced HTML Techniques",
+        "Description": "Explores advanced concepts and techniques in HTML.",
+        "Subitems": [
+          {
+            "ID": "000040",
+            "NodeName": "Templates and Slots",
+            "Description": "Creating and using <template> and <slot> for web components."
+          },
+          {
+            "ID": "000041",
+            "NodeName": "Custom Data Attributes",
+            "Description": "Implementing custom data attributes (data-*)."
+          },
+          {
+            "ID": "000042",
+            "NodeName": "Dialogs",
+            "Description": "Using <dialog> for modals and interactive elements."
+          },
+          {
+            "ID": "000043",
+            "NodeName": "Shadow DOM",
+            "Description": "Understanding shadow DOM and encapsulation basics."
+          },
+          {
+            "ID": "000044",
+            "NodeName": "Progressive Enhancement",
+            "Description": "Applying best practices for future-proof HTML."
+          }
+        ]
+      }
+    }
+  },
+  "CSS": {
+    "ID": "000045",
+    "NodeName": "CSS",
+    "Description": "A skill tree covering mastery of CSS for web design and development.",
+    "Subitems": {
+      "CSS Basics": {
+        "ID": "000046",
+        "NodeName": "CSS Basics",
+        "Description": "Covers the foundational elements of CSS.",
+        "Subitems": [
+          {
+            "ID": "000047",
+            "NodeName": "Syntax",
+            "Description": "Understanding the syntax: selectors, properties, and values."
+          },
+          {
+            "ID": "000048",
+            "NodeName": "Basic Selectors",
+            "Description": "Using basic selectors: type, class, ID, universal (*)"
+          },
+          {
+            "ID": "000049",
+            "NodeName": "Common Properties",
+            "Description": "Applying common properties: color, background-color, font-size, margin, padding, border."
+          },
+          {
+            "ID": "000050",
+            "NodeName": "Box Model",
+            "Description": "Understanding the box model (content, padding, border, margin)."
+          },
+          {
+            "ID": "000051",
+            "NodeName": "Linking CSS",
+            "Description": "Linking CSS to HTML using <link> and <style>."
+          }
+        ]
+      },
+      "Selectors Mastery": {
+        "ID": "000052",
+        "NodeName": "Selectors Mastery",
+        "Description": "Focuses on mastering CSS selectors for precise styling.",
+        "Subitems": [
+          {
+            "ID": "000053",
+            "NodeName": "Combinators",
+            "Description": "Using combinators: descendant ( ), child (>), adjacent sibling (+), general sibling (~)."
+          },
+          {
+            "ID": "000054",
+            "NodeName": "Attribute Selectors",
+            "Description": "Mastering attribute selectors: [type='text'], [type^='a'], [type$='z'], [type*='e']."
+          },
+          {
+            "ID": "000055",
+            "NodeName": "Pseudo-Classes",
+            "Description": "Working with pseudo-classes: :hover, :focus, :nth-child(), :nth-of-type()."
+          },
+          {
+            "ID": "000056",
+            "NodeName": "Pseudo-Elements",
+            "Description": "Leveraging pseudo-elements: ::before, ::after, ::marker."
+          },
+          {
+            "ID": "000057",
+            "NodeName": "Efficient Selectors",
+            "Description": "Writing specific and efficient selectors to avoid conflicts."
+          }
+        ]
+      },
+      "Box Model and Layout": {
+        "ID": "000058",
+        "NodeName": "Box Model and Layout",
+        "Description": "Explores layout fundamentals and the CSS box model.",
+        "Subitems": [
+          {
+            "ID": "000059",
+            "NodeName": "Dimensions",
+            "Description": "Understanding width, height, max-width, max-height, min-width, min-height."
+          },
+          {
+            "ID": "000060",
+            "NodeName": "Overflow",
+            "Description": "Controlling overflow: overflow, overflow-x, overflow-y."
+          },
+          {
+            "ID": "000061",
+            "NodeName": "Box Sizing",
+            "Description": "Applying box-sizing for predictable dimensions."
+          },
+          {
+            "ID": "000062",
+            "NodeName": "Spacing",
+            "Description": "Using margins, padding, and borders effectively."
+          },
+          {
+            "ID": "000063",
+            "NodeName": "Floats and Display",
+            "Description": "Clearing floats and understanding block vs. inline elements."
+          }
+        ]
+      },
+      "Typography": {
+        "ID": "000064",
+        "NodeName": "Typography",
+        "Description": "Covers font and text styling techniques.",
+        "Subitems": [
+          {
+            "ID": "000065",
+            "NodeName": "Font Properties",
+            "Description": "Setting font properties: font-family, font-size, font-weight, font-style."
+          },
+          {
+            "ID": "000066",
+            "NodeName": "Text Spacing",
+            "Description": "Controlling text spacing: letter-spacing, line-height, word-spacing."
+          },
+          {
+            "ID": "000067",
+            "NodeName": "Text Alignment",
+            "Description": "Aligning text with text-align and vertical-align."
+          },
+          {
+            "ID": "000068",
+            "NodeName": "Decorative Styles",
+            "Description": "Applying decorative styles: text-transform, text-shadow, text-decoration."
+          },
+          {
+            "ID": "000069",
+            "NodeName": "Web Fonts",
+            "Description": "Using web fonts with @font-face or services like Google Fonts."
+          }
+        ]
+      },
+      "Positioning": {
+        "ID": "000070",
+        "NodeName": "Positioning",
+        "Description": "Focuses on positioning elements on the page.",
+        "Subitems": [
+          {
+            "ID": "000071",
+            "NodeName": "Position Values",
+            "Description": "Mastering position values: static, relative, absolute, fixed, sticky."
+          },
+          {
+            "ID": "000072",
+            "NodeName": "Z-Index",
+            "Description": "Controlling z-index and stacking context."
+          },
+          {
+            "ID": "000073",
+            "NodeName": "Positioning Properties",
+            "Description": "Using top, right, bottom, left to position elements."
+          },
+          {
+            "ID": "000074",
+            "NodeName": "Transforms",
+            "Description": "Combining positioning with transforms."
+          },
+          {
+            "ID": "000075",
+            "NodeName": "Nested Contexts",
+            "Description": "Understanding relative positioning contexts for nested elements."
+          }
+        ]
+      },
+      "Flexbox": {
+        "ID": "000076",
+        "NodeName": "Flexbox",
+        "Description": "Covers CSS Flexbox for creating flexible layouts.",
+        "Subitems": [
+          {
+            "ID": "000077",
+            "NodeName": "Flex Containers",
+            "Description": "Defining flex containers and items: display: flex."
+          },
+          {
+            "ID": "000078",
+            "NodeName": "Alignment",
+            "Description": "Aligning items: justify-content, align-items, align-self."
+          },
+          {
+            "ID": "000079",
+            "NodeName": "Flex Wrapping",
+            "Description": "Wrapping elements: flex-wrap and flex-flow."
+          },
+          {
+            "ID": "000080",
+            "NodeName": "Proportions",
+            "Description": "Controlling proportions: flex-grow, flex-shrink, flex-basis."
+          },
+          {
+            "ID": "000081",
+            "NodeName": "Layout Building",
+            "Description": "Building layouts with cross-axis and main-axis alignment."
+          }
+        ]
+      },
+      "Grid Layout": {
+        "ID": "000082",
+        "NodeName": "Grid Layout",
+        "Description": "Explores CSS Grid for advanced layouts.",
+        "Subitems": [
+          {
+            "ID": "000083",
+            "NodeName": "Grid Setup",
+            "Description": "Setting up grids with display: grid."
+          },
+          {
+            "ID": "000084",
+            "NodeName": "Grid Tracks",
+            "Description": "Defining grid tracks: grid-template-rows, grid-template-columns."
+          },
+          {
+            "ID": "000085",
+            "NodeName": "Placing Items",
+            "Description": "Placing items with grid-area and shorthand notations."
+          },
+          {
+            "ID": "000086",
+            "NodeName": "Alignment",
+            "Description": "Aligning items: align-content, justify-content, place-items."
+          },
+          {
+            "ID": "000087",
+            "NodeName": "Spacing",
+            "Description": "Using grid gaps and fr units for spacing."
+          }
+        ]
+      },
+      "Responsive Design": {
+        "ID": "000088",
+        "NodeName": "Responsive Design",
+        "Description": "Covers techniques for creating responsive web designs.",
+        "Subitems": [
+          {
+            "ID": "000089",
+            "NodeName": "Media Queries",
+            "Description": "Understanding and using media queries: @media."
+          },
+          {
+            "ID": "000090",
+            "NodeName": "Fluid Layouts",
+            "Description": "Creating fluid layouts with percentages, vh, vw, and calc()."
+          },
+          {
+            "ID": "000091",
+            "NodeName": "Breakpoints",
+            "Description": "Working with breakpoints for different screen sizes."
+          },
+          {
+            "ID": "000092",
+            "NodeName": "Scaling",
+            "Description": "Using min, max, and clamp() for responsive scaling."
+          },
+          {
+            "ID": "000093",
+            "NodeName": "Combined Techniques",
+            "Description": "Combining Flexbox and Grid for adaptive layouts."
+          }
+        ]
+      },
+      "CSS Variables and Custom Properties": {
+        "ID": "000094",
+        "NodeName": "CSS Variables and Custom Properties",
+        "Description": "Focuses on leveraging custom properties in CSS.",
+        "Subitems": [
+          {
+            "ID": "000095",
+            "NodeName": "Declaring Variables",
+            "Description": "Declaring and using custom properties: --main-color, var(--main-color)."
+          },
+          {
+            "ID": "000096",
+            "NodeName": "Variable Scopes",
+            "Description": "Defining variable scopes (global vs. local)."
+          },
+          {
+            "ID": "000097",
+            "NodeName": "Dynamic Themes",
+            "Description": "Creating dynamic themes with variables."
+          },
+          {
+            "ID": "000098",
+            "NodeName": "Advanced Styling",
+            "Description": "Combining variables with calc() for advanced styling."
+          },
+          {
+            "ID": "000099",
+            "NodeName": "Fallback Values",
+            "Description": "Managing fallback values for older browsers."
+          }
+        ]
+      },
+      "Advanced Styling": {
+        "ID": "000100",
+        "NodeName": "Advanced Styling",
+        "Description": "Covers advanced styling techniques and effects.",
+        "Subitems": [
+          {
+            "ID": "000101",
+            "NodeName": "Transitions",
+            "Description": "Creating transitions with transition and easing functions."
+          },
+          {
+            "ID": "000102",
+            "NodeName": "Animations",
+            "Description": "Animating elements with @keyframes and animation."
+          },
+          {
+            "ID": "000103",
+            "NodeName": "Filters",
+            "Description": "Applying filters: blur, brightness, contrast, drop-shadow."
+          },
+          {
+            "ID": "000104",
+            "NodeName": "Clipping and Masking",
+            "Description": "Using clipping and masking: clip-path, mask."
+          },
+          {
+            "ID": "000105",
+            "NodeName": "Parallax Effects",
+            "Description": "Implementing parallax effects with background properties."
+          }
+        ]
+      },
+      "Preprocessors and Frameworks": {
+        "ID": "000106",
+        "NodeName": "Preprocessors and Frameworks",
+        "Description": "Explores preprocessors like Sass/SCSS and frameworks like Bootstrap.",
+        "Subitems": [
+          {
+            "ID": "000107",
+            "NodeName": "Preprocessors Syntax",
+            "Description": "Understanding the syntax of preprocessors like Sass/SCSS or Less."
+          },
+          {
+            "ID": "000108",
+            "NodeName": "Preprocessor Features",
+            "Description": "Using nested rules, variables, mixins, and partials."
+          },
+          {
+            "ID": "000109",
+            "NodeName": "Compilation",
+            "Description": "Compiling preprocessors into CSS."
+          },
+          {
+            "ID": "000110",
+            "NodeName": "Utility Frameworks",
+            "Description": "Leveraging utility classes with frameworks like Tailwind or Bootstrap."
+          },
+          {
+            "ID": "000111",
+            "NodeName": "Integration",
+            "Description": "Integrating preprocessors or frameworks into a build pipeline."
+          }
+        ]
+      }
+    }
+  },
+  "JavaScript": {
+    "ID": "000112",
+    "NodeName": "JavaScript",
+    "Description": "A skill tree covering mastery of JavaScript for web development.",
+    "Subitems": {
+      "Learn the Basics": {
+        "ID": "000113",
+        "NodeName": "Learn the Basics",
+        "Description": "Covers foundational JavaScript concepts and syntax.",
+        "Subitems": [
+          {
+            "ID": "000114",
+            "NodeName": "Variables",
+            "Description": "Understanding var, let, and const for declaring variables."
+          },
+          {
+            "ID": "000115",
+            "NodeName": "Primitive Data Types",
+            "Description": "Covers string, number, boolean, null, and undefined."
+          },
+          {
+            "ID": "000116",
+            "NodeName": "Control Structures",
+            "Description": "Using if, else, switch, and loops (for, while)."
+          },
+          {
+            "ID": "000117",
+            "NodeName": "Type Coercion",
+            "Description": "Understanding type coercion and differences between == and ===."
+          },
+          {
+            "ID": "000118",
+            "NodeName": "Basic Functions",
+            "Description": "Working with function declarations, expressions, and arrow functions."
+          }
+        ]
+      },
+      "DOM Manipulation": {
+        "ID": "000119",
+        "NodeName": "DOM Manipulation",
+        "Description": "Focuses on interacting with and modifying the Document Object Model.",
+        "Subitems": [
+          {
+            "ID": "000120",
+            "NodeName": "Selecting Elements",
+            "Description": "Using document.querySelector and getElementById to select DOM elements."
+          },
+          {
+            "ID": "000121",
+            "NodeName": "Modifying Content",
+            "Description": "Using innerHTML, textContent, and setAttribute to modify content."
+          },
+          {
+            "ID": "000122",
+            "NodeName": "Dynamic Elements",
+            "Description": "Adding and removing elements dynamically in the DOM."
+          },
+          {
+            "ID": "000123",
+            "NodeName": "Event Handling",
+            "Description": "Using addEventListener and understanding event propagation."
+          },
+          {
+            "ID": "000124",
+            "NodeName": "Styles and Classes",
+            "Description": "Working with styles and classes programmatically."
+          }
+        ]
+      },
+      "Fetch API and Asynchronous JavaScript": {
+        "ID": "000125",
+        "NodeName": "Fetch API and Asynchronous JavaScript",
+        "Description": "Covers asynchronous programming with the Fetch API and Promises.",
+        "Subitems": [
+          {
+            "ID": "000126",
+            "NodeName": "Fetch API",
+            "Description": "Using fetch to perform HTTP requests."
+          },
+          {
+            "ID": "000127",
+            "NodeName": "Promises",
+            "Description": "Understanding then, catch, and finally for handling asynchronous actions."
+          },
+          {
+            "ID": "000128",
+            "NodeName": "Async/Await",
+            "Description": "Writing asynchronous code with async and await."
+          },
+          {
+            "ID": "000129",
+            "NodeName": "Error Handling",
+            "Description": "Handling errors in API calls effectively."
+          },
+          {
+            "ID": "000130",
+            "NodeName": "Parsing JSON",
+            "Description": "Parsing JSON responses and working with API data."
+          }
+        ]
+      },
+      "Event-Driven Programming": {
+        "ID": "000131",
+        "NodeName": "Event-Driven Programming",
+        "Description": "Explores managing interactivity using events.",
+        "Subitems": [
+          {
+            "ID": "000132",
+            "NodeName": "Event Listeners",
+            "Description": "Understanding event listeners and handlers."
+          },
+          {
+            "ID": "000133",
+            "NodeName": "User Interactions",
+            "Description": "Managing user interactions like clicks, input, and keypress."
+          },
+          {
+            "ID": "000134",
+            "NodeName": "Event Propagation",
+            "Description": "Learning bubbling, capturing, and delegation."
+          },
+          {
+            "ID": "000135",
+            "NodeName": "Custom Events",
+            "Description": "Using CustomEvent for creating custom events."
+          },
+          {
+            "ID": "000136",
+            "NodeName": "Interactivity",
+            "Description": "Building interactivity through event-driven logic."
+          }
+        ]
+      },
+      "ES6+ Features": {
+        "ID": "000137",
+        "NodeName": "ES6+ Features",
+        "Description": "Covers modern JavaScript features introduced in ES6 and later.",
+        "Subitems": [
+          {
+            "ID": "000138",
+            "NodeName": "Template Literals",
+            "Description": "Using template literals for dynamic string creation."
+          },
+          {
+            "ID": "000139",
+            "NodeName": "Destructuring",
+            "Description": "Destructuring objects and arrays for cleaner code."
+          },
+          {
+            "ID": "000140",
+            "NodeName": "Spread/Rest Operators",
+            "Description": "Using the spread and rest operators (...)."
+          },
+          {
+            "ID": "000141",
+            "NodeName": "Modules",
+            "Description": "Organizing code using import and export modules."
+          },
+          {
+            "ID": "000142",
+            "NodeName": "Optional Chaining",
+            "Description": "Using optional chaining (?.) for safe property access."
+          }
+        ]
+      }
+    }
+  },
+  "VersionControl": {
+    "ID": "000143",
+    "NodeName": "Version Control",
+    "Description": "A skill tree covering mastery of version control using Git.",
+    "Subitems": {
+      "Version Control Basics": {
+        "ID": "000144",
+        "NodeName": "Version Control Basics",
+        "Description": "Covers foundational concepts and commands in Git.",
+        "Subitems": [
+          {
+            "ID": "000145",
+            "NodeName": "Purpose of Version Control",
+            "Description": "Understanding the purpose of version control (tracking changes, collaboration)."
+          },
+          {
+            "ID": "000146",
+            "NodeName": "Initialize Repository",
+            "Description": "Initializing a Git repository (git init)."
+          },
+          {
+            "ID": "000147",
+            "NodeName": "Clone Repository",
+            "Description": "Cloning repositories (git clone)."
+          },
+          {
+            "ID": "000148",
+            "NodeName": "View Changes",
+            "Description": "Viewing changes with git status and git diff."
+          },
+          {
+            "ID": "000149",
+            "NodeName": "Staging and Committing",
+            "Description": "Staging and committing changes with git add and git commit."
+          }
+        ]
+      },
+      "Branching and Merging": {
+        "ID": "000150",
+        "NodeName": "Branching and Merging",
+        "Description": "Focuses on creating and managing branches in Git.",
+        "Subitems": [
+          {
+            "ID": "000151",
+            "NodeName": "Create Branches",
+            "Description": "Creating branches with git branch, git checkout, or git switch."
+          },
+          {
+            "ID": "000152",
+            "NodeName": "Merge Branches",
+            "Description": "Merging branches with git merge."
+          },
+          {
+            "ID": "000153",
+            "NodeName": "Resolve Conflicts",
+            "Description": "Resolving merge conflicts manually."
+          },
+          {
+            "ID": "000154",
+            "NodeName": "Branch History",
+            "Description": "Viewing branch history and structure with git log --graph."
+          },
+          {
+            "ID": "000155",
+            "NodeName": "Delete Branches",
+            "Description": "Deleting branches locally with git branch -d."
+          }
+        ]
+      },
+      "Collaboration with Remotes": {
+        "ID": "000156",
+        "NodeName": "Collaboration with Remotes",
+        "Description": "Covers working with remote repositories for team collaboration.",
+        "Subitems": [
+          {
+            "ID": "000157",
+            "NodeName": "Connect Remote",
+            "Description": "Connecting to a remote repository with git remote add origin."
+          },
+          {
+            "ID": "000158",
+            "NodeName": "Push Changes",
+            "Description": "Pushing changes to remotes with git push."
+          },
+          {
+            "ID": "000159",
+            "NodeName": "Pull Changes",
+            "Description": "Pulling changes from remotes with git pull."
+          },
+          {
+            "ID": "000160",
+            "NodeName": "Fetch Updates",
+            "Description": "Fetching updates without merging using git fetch."
+          },
+          {
+            "ID": "000161",
+            "NodeName": "Fetch vs Pull",
+            "Description": "Understanding the difference between fetch and pull."
+          }
+        ]
+      },
+      "Undoing Changes": {
+        "ID": "000162",
+        "NodeName": "Undoing Changes",
+        "Description": "Focuses on undoing and reverting changes in Git.",
+        "Subitems": [
+          {
+            "ID": "000163",
+            "NodeName": "Undo Staged Changes",
+            "Description": "Undoing staged changes with git reset."
+          },
+          {
+            "ID": "000164",
+            "NodeName": "Revert Commits",
+            "Description": "Reverting commits with git revert."
+          },
+          {
+            "ID": "000165",
+            "NodeName": "Reset to Commit",
+            "Description": "Resetting to a previous commit with git reset --hard."
+          },
+          {
+            "ID": "000166",
+            "NodeName": "Commit History",
+            "Description": "Viewing commit history with git log."
+          },
+          {
+            "ID": "000167",
+            "NodeName": "Checkout Commits",
+            "Description": "Checking out specific commits or files with git checkout."
+          }
+        ]
+      },
+      "Advanced Topics": {
+        "ID": "000168",
+        "NodeName": "Advanced Topics",
+        "Description": "Explores advanced Git topics for experienced users.",
+        "Subitems": [
+          {
+            "ID": "000169",
+            "NodeName": "Gitignore",
+            "Description": "Using .gitignore to exclude files."
+          },
+          {
+            "ID": "000170",
+            "NodeName": "Stash Changes",
+            "Description": "Stashing changes with git stash and applying stashed work."
+          },
+          {
+            "ID": "000171",
+            "NodeName": "Cherry-Pick Commits",
+            "Description": "Cherry-picking specific commits with git cherry-pick."
+          },
+          {
+            "ID": "000172",
+            "NodeName": "Tags",
+            "Description": "Working with tags (git tag) for versioning."
+          },
+          {
+            "ID": "000173",
+            "NodeName": "Rebase",
+            "Description": "Understanding and using rebase (git rebase) to simplify history."
+          }
+        ]
+      }
+    }
+  },
+  "React": {
+    "ID": "000174",
+    "NodeName": "React",
+    "Description": "A skill tree covering mastery of React for building web applications.",
+    "Subitems": {
+      "React Basics": {
+        "ID": "000175",
+        "NodeName": "React Basics",
+        "Description": "Covers foundational concepts for setting up and building React applications.",
+        "Subitems": [
+          {
+            "ID": "000176",
+            "NodeName": "Setup Project",
+            "Description": "Setting up a React project using create-react-app, Vite, or manual setup with Webpack."
+          },
+          {
+            "ID": "000177",
+            "NodeName": "JSX Syntax",
+            "Description": "Understanding JSX syntax and embedding expressions in components."
+          },
+          {
+            "ID": "000178",
+            "NodeName": "Functional Components",
+            "Description": "Creating functional components in React."
+          },
+          {
+            "ID": "000179",
+            "NodeName": "Props",
+            "Description": "Using props to pass data between components."
+          },
+          {
+            "ID": "000180",
+            "NodeName": "Lists and Events",
+            "Description": "Rendering lists and handling basic events like onClick and onChange."
+          }
+        ]
+      },
+      "State and Lifecycle": {
+        "ID": "000181",
+        "NodeName": "State and Lifecycle",
+        "Description": "Focuses on managing state and understanding component lifecycle in React.",
+        "Subitems": [
+          {
+            "ID": "000182",
+            "NodeName": "useState",
+            "Description": "Managing local state with the useState hook."
+          },
+          {
+            "ID": "000183",
+            "NodeName": "useEffect",
+            "Description": "Using useEffect for side effects like fetching data and subscriptions."
+          },
+          {
+            "ID": "000184",
+            "NodeName": "Component Re-rendering",
+            "Description": "Understanding component re-rendering and dependency arrays."
+          },
+          {
+            "ID": "000185",
+            "NodeName": "Lifting State Up",
+            "Description": "Sharing data across components by lifting state up."
+          },
+          {
+            "ID": "000186",
+            "NodeName": "Effect Cleanup",
+            "Description": "Cleaning up effects to prevent memory leaks."
+          }
+        ]
+      },
+      "Component Composition and Reusability": {
+        "ID": "000187",
+        "NodeName": "Component Composition and Reusability",
+        "Description": "Covers techniques for composing and reusing components effectively.",
+        "Subitems": [
+          {
+            "ID": "000188",
+            "NodeName": "Component Nesting",
+            "Description": "Composing components by nesting and reusing them."
+          },
+          {
+            "ID": "000189",
+            "NodeName": "Children Prop",
+            "Description": "Using the children prop to create wrapper components."
+          },
+          {
+            "ID": "000190",
+            "NodeName": "Controlled/Uncontrolled Components",
+            "Description": "Writing controlled and uncontrolled components, such as forms."
+          },
+          {
+            "ID": "000191",
+            "NodeName": "Prop Drilling",
+            "Description": "Understanding prop drilling and using alternatives like the context API."
+          },
+          {
+            "ID": "000192",
+            "NodeName": "Custom Hooks",
+            "Description": "Creating reusable custom hooks for shared logic."
+          }
+        ]
+      },
+      "React Router": {
+        "ID": "000193",
+        "NodeName": "React Router",
+        "Description": "Focuses on implementing routing and navigation in React applications.",
+        "Subitems": [
+          {
+            "ID": "000194",
+            "NodeName": "Basic Routing",
+            "Description": "Implementing routing with BrowserRouter, Routes, and Route."
+          },
+          {
+            "ID": "000195",
+            "NodeName": "Dynamic Routes",
+            "Description": "Using dynamic and nested routes in React Router."
+          },
+          {
+            "ID": "000196",
+            "NodeName": "Router Hooks",
+            "Description": "Using hooks like useParams, useNavigate, and useLocation."
+          },
+          {
+            "ID": "000197",
+            "NodeName": "Protected Routes",
+            "Description": "Creating protected routes with authentication guards."
+          },
+          {
+            "ID": "000198",
+            "NodeName": "404 and Redirects",
+            "Description": "Handling 404 pages and redirects in routing."
+          }
+        ]
+      },
+      "Advanced React": {
+        "ID": "000199",
+        "NodeName": "Advanced React",
+        "Description": "Covers advanced React concepts for optimization and better performance.",
+        "Subitems": [
+          {
+            "ID": "000200",
+            "NodeName": "Performance Optimization",
+            "Description": "Optimizing performance with React.memo, useMemo, and useCallback."
+          },
+          {
+            "ID": "000201",
+            "NodeName": "Lazy Loading",
+            "Description": "Using React.lazy and Suspense for code splitting and lazy loading."
+          },
+          {
+            "ID": "000202",
+            "NodeName": "Context API",
+            "Description": "Managing global state with the Context API and useContext hook."
+          },
+          {
+            "ID": "000203",
+            "NodeName": "React DevTools",
+            "Description": "Debugging and analyzing performance with React DevTools."
+          },
+          {
+            "ID": "000204",
+            "NodeName": "Virtual DOM",
+            "Description": "Understanding the reconciliation process and React 2019s virtual DOM."
+          }
+        ]
+      }
+    }
+  }
+}
