@@ -78,6 +78,7 @@ var network = new vis.Network(container, data, options);
             ${nodeData.title}<br>
             <div class="button-container">
                 <button id="completeButton" class="complete-button">Complete</button>
+                <button id="inProgressButton" class="inProgress-button">In-Progress</button>
                 <button id="removeButton" class="remove-button">Remove</button>
             </div>
           `;
@@ -87,7 +88,7 @@ var network = new vis.Network(container, data, options);
           floatingInfo.style.top = `${pointerPos.y + 10}px`;
           floatingInfo.style.display = "block";
 
-                  // Add event listeners to the buttons
+        // Add event listeners to the buttons
         document.getElementById('completeButton').addEventListener('click', function () {
             nodes.update({ id: nodeId, color: { background: 'lightgreen' } });
             floatingInfo.style.display = "none";
@@ -100,6 +101,12 @@ var network = new vis.Network(container, data, options);
                     }
                 }
             });
+        });
+
+        document.getElementById('inProgressButton').addEventListener('click', function () {
+            nodes.update({ id: nodeId, color: { background: 'yellow' } });
+            floatingInfo.style.display = "none";
+
         });
 
         document.getElementById('removeButton').addEventListener('click', function () {
