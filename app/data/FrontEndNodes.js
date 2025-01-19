@@ -28,7 +28,7 @@ const data = [
   {
     "ID": 3,
     "NodeName": "Semantic HTML",
-    "Description": "Focuses on semantic tags like <header>, <footer>, and <article> to create meaningful web pages.",
+    "Description": "Focuses on semantic tags like &lt;header&gt;, &lt;footer&gt;, and &lt;article&gt; to create meaningful web pages.",
     "from": 1,
     "x": 297,
     "y": -165,
