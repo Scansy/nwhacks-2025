@@ -10,6 +10,7 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import frontendData from '../frontenddata.json';
+import styles from './App.module.css'; // Import the CSS module
 
 const mapDataToNodesAndEdges = (data) => {
   const nodes = [];
@@ -18,7 +19,7 @@ const mapDataToNodesAndEdges = (data) => {
     nodes.push({
       id: item.ID.toString(),
       position: { x: Math.random() * 400, y: Math.random() * 400 },
-      data: { label: item.NodeName },
+      data: { label: item.NodeName, className: styles.skillNode }, // Use the CSS module class
     });
     if (parentId) {
       edges.push({
@@ -63,6 +64,13 @@ export default function App() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={{
+          default: ({ data }) => (
+            <div className={data.className}>
+              {data.label}
+            </div>
+          ),
+        }}
       >
         <MiniMap />
         <Controls />

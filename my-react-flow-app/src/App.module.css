@@ -18,6 +18,16 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.skillNode {
+  color: black;
+  margin: 0;
+  padding: 10px;
+  border: 2px solid #333; /* Dark gray border */
+  border-radius: 5px;
+  background-color: #f0f0f0; /* Light gray background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
