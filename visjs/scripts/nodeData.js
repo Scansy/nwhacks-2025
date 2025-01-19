@@ -1,11 +1,11 @@
 const data = [
-  // Frontend
   {
     "ID": -1,
     "NodeName": "User",
     "Description": "Represents a user's skill tree.",
     "discipline": "Frontend"
   },
+  // Frontend
   {
     "ID": 1,
     "NodeName": "HTML",
@@ -104,6 +104,42 @@ const data = [
     "from": 11,
     "discipline": "Frontend"
   },
+  {
+    "ID": 17,
+    "NodeName": "React",
+    "Description": "Explains how to use the Fetch API for making HTTP requests and handling responses.",
+    "from": 11
+  },
+  {
+    "ID": 18,
+    "NodeName": "React Basics",
+    "Description": "Introduces React, a JavaScript library for building user interfaces.",
+    "from": 17
+  },
+  {
+    "ID": 19,
+    "NodeName": "React Components",
+    "Description": "Covers React components, props, and state for building reusable UI elements.",
+    "from": 17
+  },
+  {
+    "ID": 20,
+    "NodeName": "React Hooks",
+    "Description": "Explores React Hooks for managing state and side effects in functional components.",
+    "from": 17
+  },
+  {
+    "ID": 21,
+    "NodeName": "React Router",
+    "Description": "Introduces React Router for adding navigation and routing to React applications.",
+    "from": 17
+  },
+  {
+    "ID": 22,
+    "NodeName": "Redux",
+    "Description": "Covers Redux, a predictable state container for managing application state.",
+    "from": 17
+  },
   // Backend
   {
     "ID": 101,
@@ -153,6 +189,30 @@ const data = [
     "Description": "Explores JavaFX for building rich client applications with Java.",
     "from": 105,
     "discipline": "Backend"
+  },
+  {
+    "ID": 108,
+    "NodeName": "Relational Databases",
+    "Description": "Covers relational database concepts and SQL for data management.",
+    "from": -1
+  },
+  {
+    "ID": 109,
+    "NodeName": "SQL",
+    "Description": "Introduces SQL for querying and managing relational databases.",
+    "from": 108
+  },
+  {
+    "ID": 110,
+    "NodeName": "MySQL",
+    "Description": "Covers MySQL, an open-source relational database management system.",
+    "from": 109
+  },
+  {
+    "ID": 111,
+    "NodeName": "PostgreSQL",
+    "Description": "Introduces PostgreSQL, an open-source object-relational database system.",
+    "from": 109
   },
   // DevOps
   {
