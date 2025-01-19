@@ -8,6 +8,7 @@ const frontendId = [];
 const backendId= [];
 const devopsId = [];
 const cybersecId = [];
+const machineLearningId = [];
 nodes.forEach(node => {
     if (nodeIds.includes(node.id)) {
         if (node.group === "frontend") {
@@ -18,6 +19,8 @@ nodes.forEach(node => {
             devopsId.push(node.id);
         } else if (node.group === "cybersec") {
             cybersecId.push(node.id);
+        } else if (node.group === "Machine") {
+            machineLearningId.push(node.id);
         }
     }
 });
@@ -25,7 +28,6 @@ nodes.forEach(node => {
 // highlight roadmap nodes based on discipline
 document.getElementById("roadmapBox").addEventListener("change", () => {
     clearHighlight();
-    let rmNodeCount = document.querySelector("#roadmap")
     let val = document.getElementById("roadmapBox").value;
 
     if (val === "Frontend") {
@@ -70,6 +72,16 @@ document.getElementById("roadmapBox").addEventListener("change", () => {
         });
     } else if (val === "All") { // highlight all nodes
         highlightAll();
+    } else {
+        machineLearningId.forEach(id => {
+            nodes.update({ id: id, color: { background: '#9e3649', border: '#ce4760' }, shadow: {enabled: true, color: "rgb(193, 21, 220)", size: 100}, borderWidth: 2});
+            if (completedNodes.includes(id)) {
+                nodes.update({ id: id, color: { background: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
+            }
+            if (inProgressNodes.includes(id)) {
+                nodes.update({ id: id, color: { background: 'orange' }, shadow: {enabled: true, color: "rgb(245, 183, 39)", size: 100}, borderWidth: 2});
+            }
+        });
     }
 });
 
@@ -83,6 +95,8 @@ function clearHighlight() {
             } else if (devopsId.includes(id)) {
                 nodes.update({ id: id, color: { background: '#e60707' }, shadow: {enabled: false}, borderWidth: 1});
             } else if (cybersecId.includes(id)) {
+                nodes.update({ id: id, color: { background: '#e60707' }, shadow: {enabled: false}, borderWidth: 1});
+            } else if (machineLearningId.includes(id)) {
                 nodes.update({ id: id, color: { background: '#e60707' }, shadow: {enabled: false}, borderWidth: 1});
             }
         }
@@ -104,5 +118,8 @@ function highlightAll() {
     });
     cybersecId.forEach(id => {
         nodes.update({ id: id, color: { background: '#c97200', border: '#7d4600' }, shadow: {enabled: false}, borderWidth: 1});
+    });
+    machineLearningId.forEach(id => {
+        nodes.update({ id: id, color: { background: '#ce4760', border: '#9e3649' }, shadow: {enabled: false}, borderWidth: 1});
     });
 }

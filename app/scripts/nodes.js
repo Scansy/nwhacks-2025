@@ -282,6 +282,7 @@ var options = {
         backend: { color: { background: '#f5f0c5', border: '#bfa297' } },
         devops: { color: { background: '#81adc8', border: '#678aa1' } },
         cybersec: { color: { background: '#c97200 ', border: '#7d4600' } },
+        Machine: { color: { background: '#ce4760', border: '#9e3649' } },
     },
     physics: false,
 
