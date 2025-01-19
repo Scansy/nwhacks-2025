@@ -24,7 +24,7 @@ for (let i = 201; i < 301; i++) {
 document.getElementById("roadmapBox").addEventListener("change", () => {
     clearHighlight();
     let rmNodeCount = document.querySelector("#roadmap")
-    rmNodeCount.style.display = "block";
+    let val = document.getElementById("roadmapBox").value;
 
     if (val === "Frontend") {
         frontendId.forEach(id => {
