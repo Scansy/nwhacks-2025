@@ -8,7 +8,8 @@ function generateNodes(data) {
             id: item.ID,
             label: item.NodeName,
             title: item.Description,
-            fixed: true
+            fixed: true,
+            color: { border: '#111', background: '#f0f0f0' },
         });
     });
 
@@ -49,11 +50,18 @@ var data = {
     edges: edges
 };
 var options = {
+    nodes: {
+        shape: "dot",
+        size: 16,
+        borderWidth: 3,
+        shadow: true
+    },
     physics: false
 };
 
 // initialize your network!
 var network = new vis.Network(container, data, options);
+
 
       // Event listener for node clicks
       network.on("click", function (params) {
@@ -120,3 +128,14 @@ var network = new vis.Network(container, data, options);
           floatingInfo.style.top = `${pointerPos.y + 10}px`;
         }
       });
+
+// // add event listener for click events
+// network.on("click", function (params) {
+//     if (params.nodes.length > 0) {
+//         var nodeId = params.nodes[0];
+//         nodes.update({ id: nodeId, color: { background: 'red' } });
+//     }
+// });
+
+// Modify the user's node
+nodes.update({ id: -1, color: { background: 'black' } });
