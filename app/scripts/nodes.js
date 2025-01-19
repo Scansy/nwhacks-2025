@@ -3,6 +3,7 @@ import FrontEndEdges from '../data/FrontEndEdges.js';
 import backEndNodes from '../data/BackEndNodes.js';
 import devOpsNodes from '../data/DevOpsNodes.js';
 import cyberSecNodes from '../data/CyberSecNodes.js';
+import machineNodes from '../data/MachineNodes.js';
 import { saveToClipboardShare, loadFromClipboardShare } from './share.js';
 
 // Function to save current state to localStorage
@@ -37,6 +38,8 @@ function saveCurrentState() {
             devopsNodes.push(formattedNode);
         } else if (node.group === 'cybersec') {
             cyberSecNodes.push(formattedNode);
+        } else if (node.group === 'Machine'){
+            machineNodes.push(formattedNode);
         }
     });
 
@@ -45,12 +48,14 @@ function saveCurrentState() {
     backendNodes.sort((a, b) => a.ID - b.ID);
     devopsNodes.sort((a, b) => a.ID - b.ID);
     cyberSecNodes.sort((a, b) => a.ID - b.ID);
+    machineNodes.sort((a, b) => a.ID - b.ID);
 
     // Create strings for each file
     const frontendString = 'const data = ' + JSON.stringify(frontendNodes, null, 2) + ';\n\nexport default data;';
     const backendString = 'const data = ' + JSON.stringify(backendNodes, null, 2) + ';\n\nexport default data;';
     const devopsString = 'const data = ' + JSON.stringify(devopsNodes, null, 2) + ';\n\nexport default data;';
     const cybersecString = 'const data = ' + JSON.stringify(cyberSecNodes, null, 2) + ';\n\nexport default data;';
+    const machineString = 'const data = ' + JSON.stringify(machineNodes, null, 2) + ';\n\nexport default data;';
 
     // Format edges
     const formattedEdges = edges.map(edge => ({
@@ -64,6 +69,7 @@ function saveCurrentState() {
     localStorage.setItem('backendNodes', backendString);
     localStorage.setItem('devopsNodes', devopsString);
     localStorage.setItem('cyberSecNodes', cybersecString);
+    localStorage.setItem('machineNodes', machineString);
     localStorage.setItem('edges', JSON.stringify(formattedEdges, null, 2));
 
     // Log the saved data
@@ -71,6 +77,7 @@ function saveCurrentState() {
     console.log('Saved Backend Nodes:', backendString);
     console.log('Saved DevOps Nodes:', devopsString);
     console.log('Saved CyberSec Nodes:', cybersecString);
+    console.log('Saved Machine Nodes:', machineString);
     console.log('Saved Edges:', JSON.stringify(formattedEdges, null, 2));
 }
 
@@ -131,6 +138,7 @@ const allNodes = [
     ...generateNodes(backEndNodes),
     ...generateNodes(devOpsNodes),
     ...generateNodes(cyberSecNodes),
+    ...generateNodes(machineNodes),
 ];
 
 var nodes = new vis.DataSet(allNodes);
@@ -338,6 +346,9 @@ network.on("click", function (params) {
                 nodes.update({ id: nodeId, color: { background: '#be3bff', highlight: '#7c00ba' } });
             }
             if (nodeData.group === "frontend") {
+                nodes.update({ id: nodeId, color: { background: '#2596be', highlight: '#2180A3' } });
+            }
+            if (nodeData.group === "Machine") {
                 nodes.update({ id: nodeId, color: { background: '#2596be', highlight: '#2180A3' } });
             }
             

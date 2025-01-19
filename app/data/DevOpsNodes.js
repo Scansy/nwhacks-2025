@@ -3,40 +3,40 @@ const nodes = [
         "ID": 400,
         "NodeName": "Unix",
         "Description": "Family of operating systems that derive from the original AT&T Unix, known for its modularity and multi-user capabilities.",
-        "x": 482,
-        "y": 309,
+        "x": 495,
+        "y": 375,
         "group": "devops"
       },
       {
         "ID": 401,
         "NodeName": "Ubuntu",
         "Description": "Popular Linux distribution based on Debian, widely used in server environments and cloud computing.",
-        "x": 391,
-        "y": 447,
+        "x": 415,
+        "y": 541,
         "group": "devops"
       },
       {
         "ID": 402,
         "NodeName": "FreeBSD",
         "Description": "Advanced Unix-like operating system descended from BSD Unix, known for its reliability and performance.",
-        "x": 383,
-        "y": 225,
+        "x": 464,
+        "y": 192,
         "group": "devops"
       },
       {
         "ID": 403,
         "NodeName": "Vim",
         "Description": "Highly configurable text editor built for efficient text editing and manipulation in terminal environments.",
-        "x": 345,
-        "y": 391,
+        "x": 368,
+        "y": 441,
         "group": "devops"
       },
       {
         "ID": 404,
         "NodeName": "Bash",
         "Description": "Unix shell and command language interpreter, standard shell for Linux and macOS systems.",
-        "x": 315,
-        "y": 292,
+        "x": 352,
+        "y": 349,
         "group": "devops"
       },
       {
@@ -75,8 +75,8 @@ const nodes = [
         "ID": 409,
         "NodeName": "Docker",
         "Description": "Platform for developing, shipping, and running applications in containers for consistent deployment.",
-        "x": 546,
-        "y": 364,
+        "x": 559,
+        "y": 458,
         "group": "devops"
       },
       {
@@ -163,37 +163,37 @@ const nodes = [
         "ID": 420,
         "NodeName": "Cloud",
         "Description": "On-demand delivery of computing resources over the internet with pay-as-you-go pricing.",
-        "x": 560,
-        "y": 446,
+        "x": 605,
+        "y": 498,
         "group": "devops"
       },
       {
         "ID": 421,
         "NodeName": "AWS",
         "Description": "Amazon Web Services, comprehensive cloud computing platform with various services and tools.",
-        "x": 480,
-        "y": 485,
+        "x": 499,
+        "y": 558,
         "group": "devops"
       },
       {
         "ID": 422,
         "NodeName": "Azure",
         "Description": "Microsoft's cloud computing platform providing a wide range of services for building and managing applications.",
-        "x": 593,
-        "y": 529,
+        "x": 651,
+        "y": 587,
         "group": "devops"
       },
       {
         "ID": 423,
         "NodeName": "Terraform",
         "Description": "Infrastructure as Code tool for building, changing, and versioning infrastructure safely and efficiently.",
-        "x": 663,
-        "y": 508,
+        "x": 731,
+        "y": 566,
         "group": "devops"
       },
       {
         "ID": 424,
-        "NodeName": false,
+        "NodeName": "DevOps",
         "Description": "",
         "x": 812,
         "y": 369,

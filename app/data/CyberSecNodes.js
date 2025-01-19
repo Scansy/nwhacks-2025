@@ -3,88 +3,88 @@ const cyberSecNodes = [
     "ID": 500,
     "NodeName": "IT skills",
     "Description": "General skills related to information technology.",
-    "x": 46,
-    "y": 150,
+    "x": 140,
+    "y": 152,
     "group": "cybersec"
   },
   {
     "ID": 501,
     "NodeName": "computer hardware",
     "Description": "Knowledge of physical components of computers.",
-    "x": -88,
-    "y": 13,
+    "x": 38,
+    "y": 70,
     "group": "cybersec"
   },
   {
     "ID": 503,
     "NodeName": "google suites",
     "Description": "Proficiency in using Google productivity tools.",
-    "x": 197,
-    "y": 268,
+    "x": 254,
+    "y": 243,
     "group": "cybersec"
   },
   {
     "ID": 504,
     "NodeName": "ms office",
     "Description": "Proficiency in using Microsoft Office tools.",
-    "x": 272,
-    "y": 379,
+    "x": 253,
+    "y": 387,
     "group": "cybersec"
   },
   {
     "ID": 505,
     "NodeName": "icloud",
     "Description": "Knowledge of Apple's cloud storage service.",
-    "x": 334,
-    "y": 583,
+    "x": 299,
+    "y": 559,
     "group": "cybersec"
   },
   {
     "ID": 506,
     "NodeName": "wifi",
     "Description": "Understanding of wireless networking technology.",
-    "x": -195,
-    "y": 112,
+    "x": -169,
+    "y": 63,
     "group": "cybersec"
   },
   {
     "ID": 507,
     "NodeName": "bluetooth",
     "Description": "Knowledge of Bluetooth wireless technology.",
-    "x": -135,
-    "y": 189,
+    "x": -245,
+    "y": 123,
     "group": "cybersec"
   },
   {
     "ID": 508,
     "NodeName": "nfc",
     "Description": "Understanding of Near Field Communication technology.",
-    "x": -204,
-    "y": 31,
+    "x": -63,
+    "y": 74,
     "group": "cybersec"
   },
   {
     "ID": 509,
     "NodeName": "windows",
     "Description": "Proficiency in using and troubleshooting Windows OS.",
-    "x": 28,
-    "y": 505,
+    "x": 54,
+    "y": 552,
     "group": "cybersec"
   },
   {
     "ID": 510,
     "NodeName": "macos",
     "Description": "Proficiency in using and troubleshooting macOS.",
-    "x": 125,
-    "y": 555,
+    "x": 156,
+    "y": 651,
     "group": "cybersec"
   },
   {
     "ID": 511,
     "NodeName": "linux",
     "Description": "Proficiency in using and troubleshooting Linux OS.",
-    "x": 223,
-    "y": 488,
+    "x": 235,
+    "y": 610,
     "group": "cybersec"
   },
   {
@@ -131,8 +131,8 @@ const cyberSecNodes = [
     "ID": 517,
     "NodeName": "topology",
     "Description": "Understanding of network topology structures.",
-    "x": -288,
-    "y": 117,
+    "x": -361,
+    "y": 103,
     "group": "cybersec"
   },
   {
@@ -155,8 +155,8 @@ const cyberSecNodes = [
     "ID": 520,
     "NodeName": "public vs private",
     "Description": "Knowledge of public and private IP addresses.",
-    "x": 24,
-    "y": 614,
+    "x": 34,
+    "y": 663,
     "group": "cybersec"
   },
   {
@@ -204,7 +204,7 @@ const cyberSecNodes = [
     "NodeName": "Connection Types",
     "Description": "Understanding of the different connection types in devices.",
     "x": -60,
-    "y": 122,
+    "y": 189,
     "group": "cybersec"
   },
   {
@@ -219,16 +219,16 @@ const cyberSecNodes = [
     "ID": 528,
     "NodeName": "OS",
     "Description": "Understanding of the 3 most common OS.",
-    "x": 137,
-    "y": 360,
+    "x": 145,
+    "y": 472,
     "group": "cybersec"
   },
   {
     "ID": 529,
-    "NodeName": "Cybersecurity",
+    "NodeName": "Cyber security",
     "Description": "",
-    "x": -63,
-    "y": 331,
+    "x": -52,
+    "y": 356,
     "group": "cybersec"
   }
   ];

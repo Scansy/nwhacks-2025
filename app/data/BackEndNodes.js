@@ -3,24 +3,24 @@ const nodes=[
         "ID": 300,
         "NodeName": "Internet of Things",
         "Description": "Network of physical objects embedded with sensors, software, and other technologies for exchanging data with other devices over the internet.",
-        "x": 554,
-        "y": -90,
+        "x": 539,
+        "y": -34,
         "group": "backend"
       },
       {
         "ID": 301,
         "NodeName": "HTTP",
         "Description": "Hypertext Transfer Protocol, the foundation of data communication for the World Wide Web.",
-        "x": 413,
-        "y": -14,
+        "x": 463,
+        "y": -66,
         "group": "backend"
       },
       {
         "ID": 302,
         "NodeName": "DNS",
         "Description": "Domain Name System that translates human-readable domain names to IP addresses.",
-        "x": 455,
-        "y": -101,
+        "x": 573,
+        "y": -165,
         "group": "backend"
       },
       {
@@ -43,16 +43,16 @@ const nodes=[
         "ID": 305,
         "NodeName": "Hosting",
         "Description": "Service that allows websites and web applications to be accessible via the World Wide Web.",
-        "x": 593,
-        "y": 1,
+        "x": 620,
+        "y": -6,
         "group": "backend"
       },
       {
         "ID": 306,
         "NodeName": "Back End Languages",
         "Description": "Programming languages specifically used for server-side development and business logic.",
-        "x": 687,
-        "y": -15,
+        "x": 715,
+        "y": -43,
         "group": "backend"
       },
       {
@@ -91,32 +91,32 @@ const nodes=[
         "ID": 311,
         "NodeName": "Version Control",
         "Description": "System for tracking and managing changes to software code and documentation.",
-        "x": 601,
-        "y": -199,
+        "x": 656,
+        "y": -159,
         "group": "backend"
       },
       {
         "ID": 312,
         "NodeName": "Git",
         "Description": "Distributed version control system for tracking changes in source code during software development.",
-        "x": 614,
-        "y": -293,
+        "x": 678,
+        "y": -255,
         "group": "backend"
       },
       {
         "ID": 313,
         "NodeName": "GitHub",
         "Description": "Web-based hosting service for version control using Git and collaboration platform for developers.",
-        "x": 688,
-        "y": -166,
+        "x": 783,
+        "y": -162,
         "group": "backend"
       },
       {
         "ID": 314,
         "NodeName": "Database",
         "Description": "Organized collection of structured information or data typically stored electronically.",
-        "x": 852,
-        "y": 116,
+        "x": 858,
+        "y": 101,
         "group": "backend"
       },
       {
@@ -139,56 +139,56 @@ const nodes=[
         "ID": 317,
         "NodeName": "APIs",
         "Description": "Application Programming Interfaces that define interactions between multiple software applications.",
-        "x": 691,
-        "y": -261,
+        "x": 833,
+        "y": -231,
         "group": "backend"
       },
       {
         "ID": 318,
         "NodeName": "REST",
         "Description": "Representational State Transfer, architectural style for distributed hypermedia systems.",
-        "x": 815,
-        "y": -232,
+        "x": 1029,
+        "y": -220,
         "group": "backend"
       },
       {
         "ID": 319,
         "NodeName": "Json",
         "Description": "JavaScript Object Notation, lightweight data-interchange format easy for humans to read and write.",
-        "x": 787,
-        "y": -307,
+        "x": 952,
+        "y": -302,
         "group": "backend"
       },
       {
         "ID": 320,
         "NodeName": "Auth",
         "Description": "Authentication and authorization processes for securing applications and verifying user identities.",
-        "x": 1025,
-        "y": 113,
+        "x": 989,
+        "y": 37,
         "group": "backend"
       },
       {
         "ID": 321,
         "NodeName": "OAuth",
         "Description": "Open standard for access delegation, commonly used for secure authorization in applications.",
-        "x": 998,
-        "y": 213,
+        "x": 1027,
+        "y": 125,
         "group": "backend"
       },
       {
         "ID": 322,
         "NodeName": "Token",
         "Description": "Digital authentication credential used for securing and maintaining user sessions.",
-        "x": 1089,
-        "y": 170,
+        "x": 1117,
+        "y": 172,
         "group": "backend"
       },
       {
         "ID": 323,
         "NodeName": "Cookies",
         "Description": "Small pieces of data stored on the client's computer used to remember stateful information.",
-        "x": 911,
-        "y": 164,
+        "x": 926,
+        "y": 94,
         "group": "backend"
       },
       {
@@ -203,23 +203,23 @@ const nodes=[
         "ID": 325,
         "NodeName": "Integration",
         "Description": "Phase in testing where individual software modules are combined and tested as a group.",
-        "x": 1110,
-        "y": -97,
+        "x": 1086,
+        "y": -151,
         "group": "backend"
       },
       {
         "ID": 326,
         "NodeName": "Unit",
         "Description": "Testing of individual components or units of source code to determine if they work correctly.",
-        "x": 1143,
-        "y": 4,
+        "x": 1159,
+        "y": -38,
         "group": "backend"
       },
       {
         "ID": 327,
         "NodeName": "Functional",
         "Description": "Testing that bases its test cases on the specifications of the software component under test.",
-        "x": 1112,
+        "x": 1159,
         "y": 59,
         "group": "backend"
       },
