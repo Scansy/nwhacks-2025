@@ -121,6 +121,9 @@ var data = {
 };
 
 var options = {
+    interaction: {
+        selectConnectedEdges: false
+     },
     manipulation: {
         enabled: true,
         addNode: function (nodeData, callback) {
@@ -184,7 +187,7 @@ network.on("click", function (params) {
 
         floatingInfo.innerHTML = `
             <strong>${nodeData.label}</strong><br>
-            ${nodeData.title}<br>
+            ${nodeData.desc}<br>
             <div class="button-container">
                 <button id="completeButton" class="complete-button button">Complete</button>
                 <button id="inProgressButton" class="inProgress-button button">In-Progress</button>
@@ -200,14 +203,14 @@ network.on("click", function (params) {
         document.getElementById('completeButton').addEventListener('click', function () {
             //add completed nodes id copy to global completed skills array
             completedNodes.push(nodeId);
-            nodes.update({ id: nodeId, color: { background: 'lightgreen' } });
+            nodes.update({ id: nodeId, color: { background: 'lightgreen', highlight: 'lightgreen' } });
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
                 if (edge.from === nodeId || edge.to === nodeId) {
                     var otherNodeId = edge.from === nodeId ? edge.to : edge.from;
                     var otherNode = nodes.get(otherNodeId);
                     if (otherNode.color && otherNode.color.background === 'lightgreen') {
-                        edges.update({id: edge.id, color: {color: 'limegreen', highlight: 'limegreen'}, shadow: {enabled: true, color: 'lime', size: 10}});
+                        edges.update({id: edge.id,  color: {color: 'limegreen', highlight: 'limegreen'}, shadow: {enabled: true, color: 'lime', size: 15}});
                     }
                 }
             });
@@ -218,13 +221,13 @@ network.on("click", function (params) {
         });
 
         document.getElementById('inProgressButton').addEventListener('click', function () {
-            nodes.update({ id: nodeId, color: { background: 'yellow' } });
+            nodes.update({ id: nodeId, color: { background: 'orange', highlight: 'Orange' } });
             floatingInfo.style.display = "none";
 
         });
 
         document.getElementById('removeButton').addEventListener('click', function () {
-            nodes.update({ id: nodeId, color: { background: '#96c2fd' } });
+            nodes.update({ id: nodeId, color: { background: '#2696be', highlight: '#2696be' } });
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
                 if (edge.from === nodeId || edge.to === nodeId) {
