@@ -6,14 +6,15 @@ const data = [
     "Description": "Represents a user's skill tree.",
     "x": 34,
     "y": 6,
-    "discipline": "Frontend"
+    "group": "frontend"
   },
   {
     "ID": 1,
     "NodeName": "HTML",
     "Description": "Covers various aspects of mastering HTML for building web pages.",
     "x": 214,
-    "y": -168
+    "y": -168,
+    "group": "frontend"
   },
   {
     "ID": 2,
@@ -21,7 +22,8 @@ const data = [
     "Description": "Introduces the fundamental elements of HTML, including structure and syntax.",
     "from": -1,
     "x": 144,
-    "y": -91
+    "y": -91,
+    "group": "frontend"
   },
   {
     "ID": 3,
@@ -29,7 +31,8 @@ const data = [
     "Description": "Focuses on semantic tags like <header>, <footer>, and <article> to create meaningful web pages.",
     "from": 1,
     "x": 297,
-    "y": -165
+    "y": -165,
+    "group": "frontend"
   },
   {
     "ID": 4,
@@ -37,7 +40,8 @@ const data = [
     "Description": "Explores form creation and implementing client-side validation techniques.",
     "from": 3,
     "x": 260,
-    "y": -92
+    "y": -92,
+    "group": "frontend"
   },
   {
     "ID": 6,
@@ -45,7 +49,8 @@ const data = [
     "Description": "Covers techniques to make web pages accessible to all users, including proper semantic usage and ARIA roles.",
     "from": 7,
     "x": 124,
-    "y": -203
+    "y": -203,
+    "group": "frontend"
   },
   {
     "ID": 7,
@@ -53,14 +58,16 @@ const data = [
     "Description": "Introduces search engine optimization principles, including meta tags and text formatting.",
     "from": 1,
     "x": 193,
-    "y": -244
+    "y": -244,
+    "group": "frontend"
   },
   {
     "ID": 9,
     "NodeName": "CSS",
     "Description": "Focuses on styling and visual design for web applications.",
     "x": 295,
-    "y": -250
+    "y": -250,
+    "group": "frontend"
   },
   {
     "ID": 10,
@@ -68,7 +75,8 @@ const data = [
     "Description": "Covers basic CSS concepts, including selectors, properties, and the box model.",
     "from": 15,
     "x": 466,
-    "y": -272
+    "y": -272,
+    "group": "frontend"
   },
   {
     "ID": 11,
@@ -76,7 +84,8 @@ const data = [
     "Description": "Introduces dynamic and interactive web development using JavaScript.",
     "from": "218",
     "x": 804,
-    "y": -406
+    "y": -406,
+    "group": "frontend"
   },
   {
     "ID": 12,
@@ -84,7 +93,8 @@ const data = [
     "Description": "Covers core JavaScript concepts such as variables, loops, and functions.",
     "from": 11,
     "x": 809,
-    "y": -533
+    "y": -533,
+    "group": "frontend"
   },
   {
     "ID": 13,
@@ -92,7 +102,8 @@ const data = [
     "Description": "Focuses on using JavaScript to interact with and modify the DOM.",
     "from": 11,
     "x": 922,
-    "y": -366
+    "y": -366,
+    "group": "frontend"
   },
   {
     "ID": 14,
@@ -100,7 +111,8 @@ const data = [
     "Description": "Explains how to use the Fetch API for making HTTP requests and handling responses.",
     "from": 11,
     "x": 903,
-    "y": -496
+    "y": -496,
+    "group": "frontend"
   },
   {
     "ID": 15,
@@ -108,7 +120,8 @@ const data = [
     "Description": "Explores CSS layout techniques like Flexbox and Grid for responsive design.",
     "from": 16,
     "x": 389,
-    "y": -362
+    "y": -362,
+    "group": "frontend"
   },
   {
     "ID": 16,
@@ -116,7 +129,8 @@ const data = [
     "Description": "Covers techniques for creating web pages that adapt to different screen sizes.",
     "from": 9,
     "x": 300,
-    "y": -341
+    "y": -341,
+    "group": "frontend"
   },
   {
     "ID": 17,
@@ -124,7 +138,8 @@ const data = [
     "Description": "Explains how to use the Fetch API for making HTTP requests and handling responses.",
     "from": "218",
     "x": 593,
-    "y": -470
+    "y": -470,
+    "group": "frontend"
   },
   {
     "ID": 18,
@@ -132,7 +147,8 @@ const data = [
     "Description": "Introduces React, a JavaScript library for building user interfaces.",
     "from": 17,
     "x": 529,
-    "y": -570
+    "y": -570,
+    "group": "frontend"
   },
   {
     "ID": 19,
@@ -140,7 +156,8 @@ const data = [
     "Description": "Covers React components, props, and state for building reusable UI elements.",
     "from": 17,
     "x": 483,
-    "y": -503
+    "y": -503,
+    "group": "frontend"
   },
   {
     "ID": 20,
@@ -148,7 +165,8 @@ const data = [
     "Description": "Explores React Hooks for managing state and side effects in functional components.",
     "from": 17,
     "x": 604,
-    "y": -581
+    "y": -581,
+    "group": "frontend"
   },
   {
     "ID": 21,
@@ -156,7 +174,8 @@ const data = [
     "Description": "Introduces React Router for adding navigation and routing to React applications.",
     "from": 17,
     "x": 690,
-    "y": -498
+    "y": -498,
+    "group": "frontend"
   },
   {
     "ID": 22,
@@ -164,7 +183,8 @@ const data = [
     "Description": "Covers Redux, a predictable state container for managing application state.",
     "from": 17,
     "x": 668,
-    "y": -570
+    "y": -570,
+    "group": "frontend"
   },
   {
     "ID": 108,
@@ -172,7 +192,8 @@ const data = [
     "Description": "Covers relational database concepts and SQL for data management.",
     "from": -1,
     "x": 111,
-    "y": 192
+    "y": 192,
+    "group": "frontend"
   },
   {
     "ID": 109,
@@ -180,7 +201,8 @@ const data = [
     "Description": "Introduces SQL for querying and managing relational databases.",
     "from": 108,
     "x": 94,
-    "y": 368
+    "y": 368,
+    "group": "frontend"
   },
   {
     "ID": 110,
@@ -188,7 +210,8 @@ const data = [
     "Description": "Covers MySQL, an open-source relational database management system.",
     "from": 109,
     "x": 203,
-    "y": 401
+    "y": 401,
+    "group": "frontend"
   },
   {
     "ID": 111,
@@ -196,9 +219,9 @@ const data = [
     "Description": "Introduces PostgreSQL, an open-source object-relational database system.",
     "from": 109,
     "x": 264,
-    "y": 239
+    "y": 239,
+    "group": "frontend"
   },
-  // DevOps
   {
     "ID": 201,
     "NodeName": "Docker",
@@ -206,7 +229,7 @@ const data = [
     "from": -1,
     "x": -48,
     "y": -127,
-    "discipline": "DevOps"
+    "group": "frontend"
   },
   {
     "ID": 202,
@@ -215,7 +238,7 @@ const data = [
     "from": 201,
     "x": -270,
     "y": -495,
-    "discipline": "DevOps"
+    "group": "frontend"
   },
   {
     "ID": 208,
@@ -223,7 +246,8 @@ const data = [
     "Description": "Covers Amazon Web Services for cloud computing solutions.",
     "from": -1,
     "x": 1,
-    "y": -439
+    "y": -439,
+    "group": "frontend"
   },
   {
     "ID": 209,
@@ -231,7 +255,8 @@ const data = [
     "Description": "Explores Amazon EC2 for scalable cloud computing instances.",
     "from": 208,
     "x": 93,
-    "y": -399
+    "y": -399,
+    "group": "frontend"
   },
   {
     "ID": 210,
@@ -239,7 +264,8 @@ const data = [
     "Description": "Covers Amazon S3 for object storage solutions.",
     "from": 208,
     "x": 102,
-    "y": -471
+    "y": -471,
+    "group": "frontend"
   },
   {
     "ID": 211,
@@ -247,7 +273,8 @@ const data = [
     "Description": "Introduces Amazon RDS for managed relational databases.",
     "from": 208,
     "x": 132,
-    "y": -569
+    "y": -569,
+    "group": "frontend"
   },
   {
     "ID": 212,
@@ -255,7 +282,8 @@ const data = [
     "Description": "Explores AWS Lambda for serverless computing.",
     "from": 208,
     "x": 40,
-    "y": -554
+    "y": -554,
+    "group": "frontend"
   },
   {
     "ID": 214,
@@ -263,7 +291,8 @@ const data = [
     "Description": "Covers AWS CloudFront for content delivery and caching.",
     "from": 208,
     "x": -80,
-    "y": -549
+    "y": -549,
+    "group": "frontend"
   },
   {
     "ID": 215,
@@ -271,7 +300,8 @@ const data = [
     "Description": "Explores AWS Route 53 for DNS and domain management.",
     "from": 208,
     "x": -10,
-    "y": -618
+    "y": -618,
+    "group": "frontend"
   },
   {
     "ID": 216,
@@ -280,7 +310,7 @@ const data = [
     "from": 202,
     "x": -136,
     "y": -653,
-    "discipline": "DevOps"
+    "group": "frontend"
   },
   {
     "ID": 217,
@@ -288,22 +318,19 @@ const data = [
     "Description": "Introduces Ansible, an open-source automation tool for configuration management, application deployment, and orchestration.",
     "from": 202,
     "x": -308,
-    "y": -628
+    "y": -628,
+    "group": "frontend"
   },
   {
-    "ID": "218",
-    "NodeName": false,
+    "ID": 218,
+    "NodeName": "FrontEndText",
     "Description": "Something",
     "from": 10,
     "x": 607,
-    "y": -367
+    "y": -367,
+    "group": "frontend"
   },
-  {
-    "ID": "219",
-    "NodeName": false,
-    "x": 786,
-    "y": -48
-  }
+
 ];
 
 export default data;
