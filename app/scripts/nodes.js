@@ -10,7 +10,7 @@ function saveCurrentState() {
     const nodes = network.body.data.nodes.get();
     const edges = network.body.data.edges.get();
     const positions = network.getPositions();
-    
+
     // Format nodes and separate by group
     const frontendNodes = [];
     const backendNodes = [];
@@ -65,7 +65,7 @@ function saveCurrentState() {
     localStorage.setItem('devopsNodes', devopsString);
     localStorage.setItem('cyberSecNodes', cybersecString);
     localStorage.setItem('edges', JSON.stringify(formattedEdges, null, 2));
-    
+
     // Log the saved data
     console.log('Saved Frontend Nodes:', frontendString);
     console.log('Saved Backend Nodes:', backendString);
@@ -89,10 +89,10 @@ saveButton.style.cursor = 'pointer';
 saveButton.style.zIndex = '1000';
 
 // Add hover effect
-saveButton.addEventListener('mouseover', function() {
+saveButton.addEventListener('mouseover', function () {
     this.style.backgroundColor = '#45a049';
 });
-saveButton.addEventListener('mouseout', function() {
+saveButton.addEventListener('mouseout', function () {
     this.style.backgroundColor = '#4CAF50';
 });
 
@@ -174,22 +174,22 @@ nodes.update({
     image: 'images/frontEnd.png',
     size: 30, // controls image size in pixels
     label: false,
-    shadow:false
-  });
+    shadow: false
+});
 
-  nodes.update({
+nodes.update({
     id: 328,
     shape: 'image',
     image: 'images/BackEnd.png',
     size: 30, // controls image size in pixels
     label: false,
-    shadow:false
-  });
+    shadow: false
+});
 
 var options = {
     interaction: {
         selectConnectedEdges: false
-     },
+    },
     manipulation: {
         enabled: true,
         addNode: function (frontEndNodes, callback) {
@@ -241,7 +241,7 @@ var options = {
         devops: { color: { background: '#e60707', border: '#4D0000' } }
     },
     physics: false,
-    
+
 };
 
 var completedNodes = [];
@@ -274,21 +274,21 @@ network.on("click", function (params) {
         document.getElementById('completeButton').addEventListener('click', function () {
             //add completed nodes id copy to global completed skills array
             completedNodes.push(nodeId);
-            nodes.update({ id: nodeId, color: { background: 'lightgreen', highlight: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
+            nodes.update({ id: nodeId, color: { background: 'lightgreen', highlight: 'lightgreen' }, shadow: { enabled: true, color: "rgb(39, 245, 63)", size: 100 }, borderWidth: 2 });
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
                 if (edge.from === nodeId || edge.to === nodeId) {
                     var otherNodeId = edge.from === nodeId ? edge.to : edge.from;
                     var otherNode = nodes.get(otherNodeId);
                     if (otherNode.color && otherNode.color.background === 'lightgreen') {
-                        edges.update({id: edge.id,  color: {color: 'limegreen', highlight: 'limegreen'}, shadow: {enabled: true, color: 'lime', size: 20}, width: 2});
+                        edges.update({ id: edge.id, color: { color: 'limegreen', highlight: 'limegreen' }, shadow: { enabled: true, color: 'lime', size: 20 }, width: 2 });
                     }
                 }
             });
 
             // display on bottom right number of completed nodes out of total nodes
             let progress = document.querySelector("#total");
-            progress.innerHTML = `Total: ${completedNodes.length-1} / ${nodes.length-1}`;
+            progress.innerHTML = `Total: ${completedNodes.length - 1} / ${nodes.length - 1}`;
         });
 
         document.getElementById('inProgressButton').addEventListener('click', function () {
@@ -302,7 +302,7 @@ network.on("click", function (params) {
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
                 if (edge.from === nodeId || edge.to === nodeId) {
-                    edges.update({id: edge.id, color: {color: '#2e7ce9', highlight: '#2e7ce9'}, shadow: {enabled: false}});
+                    edges.update({ id: edge.id, color: { color: '#2e7ce9', highlight: '#2e7ce9' }, shadow: { enabled: false } });
                 }
             });
         });
@@ -321,7 +321,7 @@ network.on("dragEnd", function (params) {
 });
 
 // Set initial user node color
-nodes.update({ id: -1, color: { background: 'lightgreen' }, shape: 'circularImage', image: 'images/user-icon.svg', size: 50});
+nodes.update({ id: -1, color: { background: 'lightgreen' }, shape: 'circularImage', image: 'images/user-icon.svg', size: 50 });
 completedNodes.push(-1);
 
 
@@ -355,7 +355,7 @@ window.onload = function () {
     }
 };
 document.getElementById('shareButton').addEventListener('click', function () {
-    saveToClipboardShare(completedNodes);
+    saveToClipboardShare(completedNodes, inProgressNodes);
 });
 
-export default {nodes, nodeIds, completedNodes, inProgressNodes};
+export default { nodes, nodeIds, completedNodes, inProgressNodes };
