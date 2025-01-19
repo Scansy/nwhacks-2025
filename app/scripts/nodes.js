@@ -2,6 +2,7 @@ import frontEndNodes from '../data/FrontEndNodes.js';
 import FrontEndEdges from '../data/FrontEndEdges.js';
 import backEndNodes from '../data/BackEndNodes.js';
 import devOpsNodes from '../data/DevOpsNodes.js';
+import cyberSecNodes from '../data/CyberSecNodes.js';
 import { saveToClipboardShare, loadFromClipboardShare } from './share.js';
 
 // Function to save current state to localStorage
@@ -14,6 +15,7 @@ function saveCurrentState() {
     const frontendNodes = [];
     const backendNodes = [];
     const devopsNodes = [];
+    const cyberSecNodes = [];
 
     nodes.forEach(node => {
         const pos = positions[node.id];
@@ -33,6 +35,8 @@ function saveCurrentState() {
             backendNodes.push(formattedNode);
         } else if (node.group === 'devops') {
             devopsNodes.push(formattedNode);
+        } else if (node.group === 'cybersec') {
+            cyberSecNodes.push(formattedNode);
         }
     });
 
@@ -40,11 +44,13 @@ function saveCurrentState() {
     frontendNodes.sort((a, b) => a.ID - b.ID);
     backendNodes.sort((a, b) => a.ID - b.ID);
     devopsNodes.sort((a, b) => a.ID - b.ID);
+    cyberSecNodes.sort((a, b) => a.ID - b.ID);
 
     // Create strings for each file
     const frontendString = 'const data = ' + JSON.stringify(frontendNodes, null, 2) + ';\n\nexport default data;';
     const backendString = 'const data = ' + JSON.stringify(backendNodes, null, 2) + ';\n\nexport default data;';
     const devopsString = 'const data = ' + JSON.stringify(devopsNodes, null, 2) + ';\n\nexport default data;';
+    const cybersecString = 'const data = ' + JSON.stringify(cyberSecNodes, null, 2) + ';\n\nexport default data;';
 
     // Format edges
     const formattedEdges = edges.map(edge => ({
@@ -57,12 +63,14 @@ function saveCurrentState() {
     localStorage.setItem('frontendNodes', frontendString);
     localStorage.setItem('backendNodes', backendString);
     localStorage.setItem('devopsNodes', devopsString);
+    localStorage.setItem('cyberSecNodes', cybersecString);
     localStorage.setItem('edges', JSON.stringify(formattedEdges, null, 2));
     
     // Log the saved data
     console.log('Saved Frontend Nodes:', frontendString);
     console.log('Saved Backend Nodes:', backendString);
     console.log('Saved DevOps Nodes:', devopsString);
+    console.log('Saved CyberSec Nodes:', cybersecString);
     console.log('Saved Edges:', JSON.stringify(formattedEdges, null, 2));
 }
 
@@ -122,6 +130,7 @@ const allNodes = [
     ...generateNodes(frontEndNodes),
     ...generateNodes(backEndNodes),
     ...generateNodes(devOpsNodes),
+    ...generateNodes(cyberSecNodes),
 ];
 
 var nodes = new vis.DataSet(allNodes);
