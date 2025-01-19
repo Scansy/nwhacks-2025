@@ -9,7 +9,7 @@ function generateNodes(data) {
             label: item.NodeName,
             title: item.Description,
             fixed: true,
-            color: { border: '#111', background: '#f0f0f0' },
+            group: "frontend",
         });
     });
 
@@ -54,8 +54,18 @@ var options = {
         shape: "dot",
         size: 16,
     },
-    physics: false
+    groups: {
+        frontend: {
+            shape: "dot",
+            color: { background: "#2596be", border: "#2180A3" },
+            font: { color: "black" },
+            borderWidth: 2,
+            shadow: true,
+        },
+    },
+    physics: false,
 };
+
 
 // initialize your network!
 var network = new vis.Network(container, data, options);
