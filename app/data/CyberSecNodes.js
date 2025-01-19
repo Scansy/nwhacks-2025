@@ -11,8 +11,8 @@ const cyberSecNodes = [
     "ID": 501,
     "NodeName": "computer hardware",
     "Description": "Knowledge of physical components of computers.",
-    "x": -68,
-    "y": -13,
+    "x": -88,
+    "y": 13,
     "group": "cybersec"
   },
   {
@@ -43,7 +43,7 @@ const cyberSecNodes = [
     "ID": 506,
     "NodeName": "wifi",
     "Description": "Understanding of wireless networking technology.",
-    "x": -172,
+    "x": -195,
     "y": 112,
     "group": "cybersec"
   },
@@ -59,8 +59,8 @@ const cyberSecNodes = [
     "ID": 508,
     "NodeName": "nfc",
     "Description": "Understanding of Near Field Communication technology.",
-    "x": -151,
-    "y": 34,
+    "x": -204,
+    "y": 31,
     "group": "cybersec"
   },
   {
@@ -91,112 +91,112 @@ const cyberSecNodes = [
     "ID": 512,
     "NodeName": "networking",
     "Description": "Knowledge of networking concepts and technologies.",
-    "x": -6,
-    "y": 277,
+    "x": -229,
+    "y": 444,
     "group": "cybersec"
   },
   {
     "ID": 513,
     "NodeName": "osi model",
     "Description": "Understanding of the OSI model for network communication.",
-    "x": -204,
-    "y": 289,
+    "x": -270,
+    "y": 273,
     "group": "cybersec"
   },
   {
     "ID": 514,
     "NodeName": "protocols",
     "Description": "Knowledge of various network protocols.",
-    "x": -289,
-    "y": 337,
+    "x": -330,
+    "y": 342,
     "group": "cybersec"
   },
   {
     "ID": 515,
     "NodeName": "ports",
     "Description": "Understanding of network ports and their functions.",
-    "x": -394,
-    "y": 202,
+    "x": -405,
+    "y": 199,
     "group": "cybersec"
   },
   {
     "ID": 516,
     "NodeName": "ssl and tls",
     "Description": "Knowledge of SSL and TLS encryption protocols.",
-    "x": -214,
-    "y": 204,
+    "x": -199,
+    "y": 243,
     "group": "cybersec"
   },
   {
     "ID": 517,
     "NodeName": "topology",
     "Description": "Understanding of network topology structures.",
-    "x": -297,
-    "y": 104,
+    "x": -288,
+    "y": 117,
     "group": "cybersec"
   },
   {
     "ID": 518,
     "NodeName": "IP terms",
     "Description": "Knowledge of IP-related terms and concepts.",
-    "x": -68,
-    "y": 482,
+    "x": -80,
+    "y": 503,
     "group": "cybersec"
   },
   {
     "ID": 519,
     "NodeName": "subnetting",
     "Description": "Understanding of subnetting in IP networks.",
-    "x": -137,
-    "y": 598,
+    "x": -79,
+    "y": 656,
     "group": "cybersec"
   },
   {
     "ID": 520,
     "NodeName": "public vs private",
     "Description": "Knowledge of public and private IP addresses.",
-    "x": -11,
-    "y": 611,
+    "x": 24,
+    "y": 614,
     "group": "cybersec"
   },
   {
     "ID": 521,
     "NodeName": "reverse engineering",
     "Description": "Skills in reverse engineering software and systems.",
-    "x": -207,
-    "y": 569,
+    "x": -169,
+    "y": 630,
     "group": "cybersec"
   },
   {
     "ID": 522,
     "NodeName": "forensics",
     "Description": "Knowledge of digital forensics techniques.",
-    "x": -296,
-    "y": 544,
+    "x": -285,
+    "y": 615,
     "group": "cybersec"
   },
   {
     "ID": 523,
     "NodeName": "CIA triad",
     "Description": "Understanding of the CIA triad: Confidentiality, Integrity, Availability.",
-    "x": -494,
-    "y": 416,
+    "x": -439,
+    "y": 438,
     "group": "cybersec"
   },
   {
     "ID": 524,
     "NodeName": "MFA/2FA",
     "Description": "Knowledge of Multi-Factor Authentication and Two-Factor Authentication.",
-    "x": -396,
-    "y": 473,
+    "x": -381,
+    "y": 538,
     "group": "cybersec"
   },
   {
     "ID": 525,
     "NodeName": "blue/red/purple team",
     "Description": "Understanding of blue, red, and purple team roles in cybersecurity.",
-    "x": -480,
-    "y": 219,
+    "x": -419,
+    "y": 316,
     "group": "cybersec"
   },
   {
@@ -211,16 +211,24 @@ const cyberSecNodes = [
     "ID": 527,
     "NodeName": "Security Skills",
     "Description": "Understanding of general cybersecurity skills.",
-    "x": -193,
-    "y": 415,
+    "x": -219,
+    "y": 536,
     "group": "cybersec"
   },
   {
     "ID": 528,
     "NodeName": "OS",
     "Description": "Understanding of the 3 most common OS.",
-    "x": 100,
-    "y": 363,
+    "x": 137,
+    "y": 360,
+    "group": "cybersec"
+  },
+  {
+    "ID": 529,
+    "NodeName": "Cybersecurity",
+    "Description": "",
+    "x": -63,
+    "y": 331,
     "group": "cybersec"
   }
   ];

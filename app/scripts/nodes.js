@@ -199,6 +199,16 @@ nodes.update({
     borderWidth: 0,
     shadow: {enabled: false}
   });
+  nodes.update({
+    id: 529,
+    shape: 'elipse',
+    size: 30, // controls image size in pixels
+    label: 'Cyber security',
+    font: { face: 'cursive', size: 40 },
+    color: { background: 'white' },
+    borderWidth: 0,
+    shadow: {enabled: false}
+  });
 
 var options = {
     interaction: {
@@ -313,7 +323,30 @@ network.on("click", function (params) {
         });
 
         document.getElementById('removeButton').addEventListener('click', function () {
-            nodes.update({ id: nodeId, color: { background: '#2696be', highlight: '#2696be' } });
+        //     frontend: { color: { background: '#2596be', border: '#2180A3' } },
+        // backend: { color: { background: '#be3bff', border: '#7c00ba' } },
+        // devops: { color: { background: '#e60707', border: '#4D0000' } },
+        // cybersec: { color: { background: '#e5e7e9 ', border: '#909497 ' } },
+            const cindex = completedNodes.indexOf(nodeId);
+            completedNodes.splice(cindex, 1);
+            const pindex = inProgressNodes.indexOf(nodeId);
+            inProgressNodes.splice(pindex, 1);
+
+            const nodeData = nodes.get(nodeId);
+            if (nodeData.group === "devops") {
+                nodes.update({ id: nodeId, color: { background: '#e60707', highlight: '#e60707' } });
+            }
+            if (nodeData.group === "cybersec") {
+                nodes.update({ id: nodeId, color: { background: '#e5e7e9', highlight: '#909497' } });
+            }
+            if (nodeData.group === "backend") {
+                nodes.update({ id: nodeId, color: { background: '#be3bff', highlight: '#7c00ba' } });
+            }
+            if (nodeData.group === "frontend") {
+                nodes.update({ id: nodeId, color: { background: '#2596be', highlight: '#2180A3' } });
+            }
+            
+            //nodes.update({ id: nodeId, color: { background: '#2696be', highlight: '#2696be' } });
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
                 if (edge.from === nodeId || edge.to === nodeId) {

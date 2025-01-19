@@ -496,11 +496,6 @@ const edges = [
   },
   {
     "from": 528,
-    "to": 512,
-    "id": "84470396-ce05-47f1-9ece-6346bfda45a0"
-  },
-  {
-    "from": 528,
     "to": 509,
     "id": "a0fcdba5-50d0-4b3b-bc3c-68132f9a8d81"
   },
@@ -668,6 +663,21 @@ const edges = [
     "from": 405,
     "to": 400,
     "id": "1abc4174-b3cc-48fe-9c71-f3464011b139"
+  },
+  {
+    "from": 512,
+    "to": 529,
+    "id": "daf2c453-eada-46df-b9e0-df5b5466b033"
+  },
+  {
+    "from": 528,
+    "to": 529,
+    "id": "480d26e8-f3c6-43e5-a1a8-f4f29ffa4fe0"
+  },
+  {
+    "from": 500,
+    "to": 529,
+    "id": "4c7bc405-6d4f-4bc5-96b1-b440fbf219f1"
   }
 ]
 export default edges;
