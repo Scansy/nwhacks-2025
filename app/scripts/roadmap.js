@@ -7,14 +7,17 @@ const inProgressNodes = nodeData.inProgressNodes;
 const frontendId = [];
 const backendId= [];
 const devopsId = [];
+const cybersecId = [];
 nodes.forEach(node => {
     if (nodeIds.includes(node.id)) {
         if (node.group === "frontend") {
             frontendId.push(node.id);
         } else if (node.group === "backend") {
             backendId.push(node.id);
-        } else {
+        } else if (node.group === "devops") {
             devopsId.push(node.id);
+        } else if (node.group === "cybersec") {
+            cybersecId.push(node.id);
         }
     }
 });
@@ -55,13 +58,20 @@ document.getElementById("roadmapBox").addEventListener("change", () => {
                 nodes.update({ id: id, color: { background: 'orange' }, shadow: {enabled: true, color: "rgb(245, 183, 39)", size: 100}, borderWidth: 2});
             }
         });
+    } else if (val === "Cybersecurity") {
+        cybersecId.forEach(id => {
+            nodes.update({ id: id, color: { background: '#cca87a', border: '#c97200' }, shadow: {enabled: true, color: "rgb(230, 173, 101)", size: 100}, borderWidth: 2});
+            if (completedNodes.includes(id)) {
+                nodes.update({ id: id, color: { background: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
+            }
+            if (inProgressNodes.includes(id)) {
+                nodes.update({ id: id, color: { background: 'orange' }, shadow: {enabled: true, color: "rgb(245, 183, 39)", size: 100}, borderWidth: 2});
+            }
+        });
+    } else if (val === "All") { // highlight all nodes
+        highlightAll();
     }
 });
-
-// document.getElementById('completeButton').addEventListener('click', function () {
-//     let val = document.getElementById("roadmapBox").value;
-//     updateProgress(val);
-// });
 
 function clearHighlight() {
     nodeIds.forEach(id => {
@@ -72,6 +82,8 @@ function clearHighlight() {
                 nodes.update({ id: id, color: { background: '#be3bff' }, shadow: {enabled: false}, borderWidth: 1});
             } else if (devopsId.includes(id)) {
                 nodes.update({ id: id, color: { background: '#e60707' }, shadow: {enabled: false}, borderWidth: 1});
+            } else if (cybersecId.includes(id)) {
+                nodes.update({ id: id, color: { background: '#e60707' }, shadow: {enabled: false}, borderWidth: 1});
             }
         }
         if (nodeIds.includes(id) && !completedNodes.includes(id) && !inProgressNodes.includes(id)) {
@@ -80,32 +92,17 @@ function clearHighlight() {
     });
 }
 
-// function countDoneNodes(val) {
-//     let count = 0;
-//     let ids;
-//     switch (val) {
-//         case "Frontend":
-//             ids = frontendId;
-//             break;
-//         case "Backend":
-//             ids = backendId;
-//             break;
-//         case "DevOps":
-//             ids = devopsId;
-//             break;
-//     }
-//     console.log(ids)
-//     nodes.forEach(node => {
-//         if (completedNodes.includes(node) && ids.includes(node.id)) {
-//             count++;
-//         }
-//     });
-//     return count;
-// }
-
-// // also called every time a node is checked!
-// function updateProgress(val) {
-//     let progress = document.querySelector("#roadmap p");
-//     console.log(countDoneNodes(val));
-//     progress.innerHTML = `${val} progress: ${countDoneNodes(val)} / ${Object.keys(nodes).length}`;
-// }
+function highlightAll() {
+    frontendId.forEach(id => {
+        nodes.update({ id: id, color: { background: '#a378c2', border: '#493657' }, shadow: {enabled: false}, borderWidth: 1});
+    });
+    backendId.forEach(id => {
+        nodes.update({ id: id, color: { background: '#f5f0c5', border: '#bfa297' }, shadow: {enabled: false}, borderWidth: 1});
+    });
+    devopsId.forEach(id => {
+        nodes.update({ id: id, color: { background: '#81adc8', border: '#678aa1' }, shadow: {enabled: false}, borderWidth: 1});
+    });
+    cybersecId.forEach(id => {
+        nodes.update({ id: id, color: { background: '#c97200', border: '#7d4600' }, shadow: {enabled: false}, borderWidth: 1});
+    });
+}
