@@ -1,4 +1,5 @@
 import nodeData from './nodeData.js';
+import { saveToClipboardShare, loadFromClipboardShare } from './share.js';
 
 // Function to save current state to localStorage
 function saveCurrentState() {
@@ -229,5 +230,19 @@ network.on("dragEnd", function (params) {
 // Set initial user node color
 nodes.update({ id: -1, color: { background: 'black' } });
 
+window.onload = function () {
+    let savedData = loadFromClipboardShare();
+    if (savedData != null) {
+        completedNodes = savedData;
+        nodes.forEach(function (node) {
+            if (completedNodes.includes(node.id)) {
+                nodes.update({ id: node.id, color: { background: 'lightgreen' } });
+            }
+        });
+    }
+};
+document.getElementById('shareButton').addEventListener('click', function () {
+    saveToClipboardShare(completedNodes);
+});
 
 export default nodes;

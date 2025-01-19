@@ -1,0 +1,18 @@
+#share {
+    position: absolute;
+    bottom: 3vh;
+    left: 3vh;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #495057;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: #adb5bd;
+        background-color: #e9ecef;
+    }
+}
