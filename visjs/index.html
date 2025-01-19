@@ -3,10 +3,26 @@
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/roadmaps.css">
 
     <script type="module" src="./scripts/nodes.js"></script>
+    <script type="module" src="./scripts/roadmap.js"></script>
 </head>
 <body>
 <div id="mynetwork"></div>
+
+<div id="ui">
+    <select id="roadmaps">
+        <option value="select" selected>Select a path</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+    </select>
+
+    <div id="progress">
+        <p></p>
+    </div>
+</div>
+
+<div id="floatingInfo" class="floating-info">Debug Box</div>
 </body>
 </html>

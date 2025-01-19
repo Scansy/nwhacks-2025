@@ -5,5 +5,40 @@ body {
 #mynetwork {
     width: 100vw;
     height: 100vh;
-    background-color: gray;
+    background-color: white;
+}
+
+.floating-info {
+position: fixed;
+display: none;
+width: 150px;
+padding: 10px;
+background-color: white;
+border: 1px solid black;
+border-radius: 4px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+z-index: 9999;
+color: black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.complete-button {
+    background-color: rgb(52, 185, 112);
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.remove-button {
+    background-color: rgb(228, 78, 78);
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
 }
