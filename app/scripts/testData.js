@@ -1,5 +1,5 @@
 const data = [
-{
+  {
     "ID": -1,
     "NodeName": "User",
     "Description": "Represents a user's skill tree.",
@@ -11,160 +11,160 @@ const data = [
     "NodeName": "HTML",
     "Description": "Covers various aspects of mastering HTML for building web pages.",
     "from": -1,
-    "x": -138,
-    "y": 160
+    "x": 216,
+    "y": -151
   },
   {
     "ID": 2,
     "NodeName": "HTML Basics",
     "Description": "Introduces the fundamental elements of HTML, including structure and syntax.",
     "from": 1,
-    "x": -187,
-    "y": 123
+    "x": 132,
+    "y": -162
   },
   {
     "ID": 3,
     "NodeName": "Semantic HTML",
     "Description": "Focuses on semantic tags like <header>, <footer>, and <article> to create meaningful web pages.",
     "from": 1,
-    "x": -212,
-    "y": 203
+    "x": 165,
+    "y": -214
   },
   {
     "ID": 4,
     "NodeName": "Forms and Validations",
     "Description": "Explores form creation and implementing client-side validation techniques.",
     "from": 1,
-    "x": -210,
-    "y": 162
+    "x": 209,
+    "y": -235
   },
   {
     "ID": 6,
     "NodeName": "Accessibility",
     "Description": "Covers techniques to make web pages accessible to all users, including proper semantic usage and ARIA roles.",
     "from": 1,
-    "x": -143,
-    "y": 102
+    "x": 122,
+    "y": -106
   },
   {
     "ID": 7,
     "NodeName": "Basics of SEO",
     "Description": "Introduces search engine optimization principles, including meta tags and text formatting.",
     "from": 1,
-    "x": -95,
-    "y": 94
+    "x": 251,
+    "y": -228
   },
   {
     "ID": 9,
     "NodeName": "CSS",
     "Description": "Focuses on styling and visual design for web applications.",
-    "from": -1,
-    "x": -6,
-    "y": -159
+    "from": 1,
+    "x": 348,
+    "y": -266
   },
   {
     "ID": 10,
     "NodeName": "CSS Basics",
     "Description": "Covers basic CSS concepts, including selectors, properties, and the box model.",
     "from": 9,
-    "x": 114,
-    "y": -379
+    "x": 361,
+    "y": -339
   },
   {
     "ID": 11,
     "NodeName": "JavaScript",
     "Description": "Introduces dynamic and interactive web development using JavaScript.",
-    "from": -1,
-    "x": 103,
-    "y": 209
+    "from": 9,
+    "x": 461,
+    "y": -372
   },
   {
     "ID": 12,
     "NodeName": "JavaScript Basics",
     "Description": "Covers core JavaScript concepts such as variables, loops, and functions.",
     "from": 11,
-    "x": -25,
-    "y": 297
+    "x": 427,
+    "y": -415
   },
   {
     "ID": 13,
     "NodeName": "DOM Manipulation",
     "Description": "Focuses on using JavaScript to interact with and modify the DOM.",
     "from": 11,
-    "x": 39,
-    "y": 274
+    "x": 475,
+    "y": -425
   },
   {
     "ID": 14,
     "NodeName": "Fetch API",
     "Description": "Explains how to use the Fetch API for making HTTP requests and handling responses.",
     "from": 11,
-    "x": -30,
-    "y": 336
+    "x": 417,
+    "y": -368
   },
   {
     "ID": 15,
     "NodeName": "Making Layouts",
     "Description": "Explores CSS layout techniques like Flexbox and Grid for responsive design.",
     "from": 9,
-    "x": -195,
-    "y": -279
+    "x": 283,
+    "y": -281
   },
   {
     "ID": 16,
     "NodeName": "Responsive Web Design",
     "Description": "Covers techniques for creating web pages that adapt to different screen sizes.",
     "from": 9,
-    "x": -46,
-    "y": -377
+    "x": 316,
+    "y": -318
   },
   {
     "ID": 17,
     "NodeName": "React",
     "Description": "Explains how to use the Fetch API for making HTTP requests and handling responses.",
     "from": 11,
-    "x": 163,
-    "y": 398
+    "x": 588,
+    "y": -478
   },
   {
     "ID": 18,
     "NodeName": "React Basics",
     "Description": "Introduces React, a JavaScript library for building user interfaces.",
     "from": 17,
-    "x": 127,
-    "y": 541
+    "x": 576,
+    "y": -540
   },
   {
     "ID": 19,
     "NodeName": "React Components",
     "Description": "Covers React components, props, and state for building reusable UI elements.",
     "from": 17,
-    "x": 235,
-    "y": 557
+    "x": 524,
+    "y": -526
   },
   {
     "ID": 20,
     "NodeName": "React Hooks",
     "Description": "Explores React Hooks for managing state and side effects in functional components.",
     "from": 17,
-    "x": 4,
-    "y": 511
+    "x": 622,
+    "y": -539
   },
   {
     "ID": 21,
     "NodeName": "React Router",
     "Description": "Introduces React Router for adding navigation and routing to React applications.",
     "from": 17,
-    "x": 295,
-    "y": 492
+    "x": 669,
+    "y": -475
   },
   {
     "ID": 22,
     "NodeName": "Redux",
     "Description": "Covers Redux, a predictable state container for managing application state.",
     "from": 17,
-    "x": 355,
-    "y": 407
+    "x": 660,
+    "y": -525
   },
   {
     "ID": 101,
@@ -203,48 +203,48 @@ const data = [
     "NodeName": "Java",
     "Description": "Introduces Java programming for backend systems.",
     "from": -1,
-    "x": 122,
-    "y": 62
+    "x": 176,
+    "y": 188
   },
   {
     "ID": 106,
     "NodeName": "Spring Boot",
     "Description": "Covers Spring Boot, a Java framework for building microservices and enterprise applications.",
     "from": 105,
-    "x": 369,
-    "y": 111
+    "x": 230,
+    "y": 157
   },
   {
     "ID": 107,
     "NodeName": "JavaFX",
     "Description": "Explores JavaFX for building rich client applications with Java.",
     "from": 105,
-    "x": 275,
-    "y": 187
+    "x": 220,
+    "y": 241
   },
   {
     "ID": 108,
     "NodeName": "Relational Databases",
     "Description": "Covers relational database concepts and SQL for data management.",
     "from": -1,
-    "x": 203,
-    "y": -40
+    "x": 219,
+    "y": 18
   },
   {
     "ID": 109,
     "NodeName": "SQL",
     "Description": "Introduces SQL for querying and managing relational databases.",
     "from": 108,
-    "x": 388,
-    "y": -179
+    "x": 400,
+    "y": -1
   },
   {
     "ID": 110,
     "NodeName": "MySQL",
     "Description": "Covers MySQL, an open-source relational database management system.",
     "from": 109,
-    "x": 610,
-    "y": -149
+    "x": 461,
+    "y": -43
   },
   {
     "ID": 111,
@@ -267,8 +267,8 @@ const data = [
     "NodeName": "Kubernetes",
     "Description": "Covers Kubernetes for container orchestration and deployment management.",
     "from": 201,
-    "x": -61,
-    "y": -390
+    "x": -270,
+    "y": -495
   },
   {
     "ID": 203,
@@ -315,72 +315,72 @@ const data = [
     "NodeName": "AWS",
     "Description": "Covers Amazon Web Services for cloud computing solutions.",
     "from": -1,
-    "x": 206,
-    "y": -88
+    "x": 99,
+    "y": -412
   },
   {
     "ID": 209,
     "NodeName": "EC2",
     "Description": "Explores Amazon EC2 for scalable cloud computing instances.",
     "from": 208,
-    "x": 364,
-    "y": -53
+    "x": 145,
+    "y": -321
   },
   {
     "ID": 210,
     "NodeName": "S3",
     "Description": "Covers Amazon S3 for object storage solutions.",
     "from": 208,
-    "x": 385,
-    "y": -81
+    "x": 392,
+    "y": -480
   },
   {
     "ID": 211,
     "NodeName": "RDS",
     "Description": "Introduces Amazon RDS for managed relational databases.",
     "from": 208,
-    "x": 311,
-    "y": -213
+    "x": 310,
+    "y": -611
   },
   {
     "ID": 212,
     "NodeName": "Lambda",
     "Description": "Explores AWS Lambda for serverless computing.",
     "from": 208,
-    "x": 211,
-    "y": -311
+    "x": 165,
+    "y": -521
   },
   {
     "ID": 214,
     "NodeName": "CloudFront",
     "Description": "Covers AWS CloudFront for content delivery and caching.",
     "from": 208,
-    "x": 310,
-    "y": -238
+    "x": 222,
+    "y": -567
   },
   {
     "ID": 215,
     "NodeName": "Route 53",
     "Description": "Explores AWS Route 53 for DNS and domain management.",
     "from": 208,
-    "x": 192,
-    "y": -298
+    "x": 71,
+    "y": -582
   },
   {
     "ID": 216,
     "NodeName": "Terraform",
     "Description": "Introduces Terraform for infrastructure as code and automation.",
     "from": 202,
-    "x": 27,
-    "y": -523
+    "x": -136,
+    "y": -653
   },
   {
     "ID": 217,
     "NodeName": "Ansible",
     "Description": "Introduces Ansible, an open-source automation tool for configuration management, application deployment, and orchestration.",
     "from": 202,
-    "x": -198,
-    "y": -547
+    "x": -308,
+    "y": -628
   }
 
 ];

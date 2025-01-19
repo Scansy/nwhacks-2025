@@ -1,5 +1,5 @@
 function generateLink(completedNodes) {
-    const baseUrl = 'http://127.0.0.1:5501/visjs/index.html';
+    const baseUrl = 'zanzigzan-app--8080.prod1b.defang.dev/';
 
     if (completedNodes.length === 0) {
         return baseUrl;
