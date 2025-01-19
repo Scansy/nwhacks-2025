@@ -11,6 +11,7 @@ function generateNodes(data) {
             fixed: true,
             group: "frontend",
         });
+        nodeIds.push(item.ID);
     });
 
     return generatedNodes;
@@ -34,6 +35,9 @@ function generateEdges(data) {
 // TEST
 // console.log(generateNodes(nodeData));
 // console.log(generateEdges(nodeData));
+
+// create an array with nodes.id
+var nodeIds = [];
 
 // create an array with nodes
 var nodes = new vis.DataSet(generateNodes(nodeData));
@@ -114,8 +118,10 @@ var network = new vis.Network(container, data, options);
                     }
                 }
             });
-            //display on bottom right number of completed nodes out of total nodes
-            progress.innerHTML = `${completedNodes.length} / ${nodes.length}`;
+
+            // display on bottom right number of completed nodes out of total nodes
+            let progress = document.querySelector("#total");
+            progress.innerHTML = `Total: ${completedNodes.length} / ${nodes.length}`;
         });
 
         document.getElementById('inProgressButton').addEventListener('click', function () {
@@ -151,16 +157,8 @@ var network = new vis.Network(container, data, options);
         }
       });
 
-// // add event listener for click events
-// network.on("click", function (params) {
-//     if (params.nodes.length > 0) {
-//         var nodeId = params.nodes[0];
-//         nodes.update({ id: nodeId, color: { background: 'red' } });
-//     }
-// });
-
 // Modify the user's node
 nodes.update({ id: -1, color: { background: 'black' } });
 
 
-export default nodes;
+export default {nodes, nodeIds, completedNodes};
