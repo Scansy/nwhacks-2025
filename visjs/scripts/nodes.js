@@ -9,7 +9,7 @@ function generateNodes(data) {
             label: item.NodeName,
             title: item.Description,
             fixed: true,
-            color: { border: '#111', background: '#f0f0f0' },
+            group: "frontend",
         });
     });
 
@@ -56,10 +56,18 @@ var options = {
         borderWidth: 3,
         shadow: true
     },
-    physics: false
+    groups: {
+        frontend: {
+            shape: "dot",
+            color: { background: "#2596be", border: "#2180A3" },
+            font: { color: "black" },
+            borderWidth: 2,
+            shadow: true,
+        },
+    },
+    physics: false,
 };
 
-var completedNodes = [];
 
 // initialize your network!
 var network = new vis.Network(container, data, options);
@@ -150,3 +158,5 @@ var network = new vis.Network(container, data, options);
 
 // Modify the user's node
 nodes.update({ id: -1, color: { background: 'black' } });
+
+export default nodes;
