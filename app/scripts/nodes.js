@@ -137,7 +137,7 @@ function generateEdges() {
 
 
 nodes.update({
-    id: "218",
+    id: 218,
     shape: 'image',
     image: 'images/frontEnd.png',
     size: 30, // controls image size in pixels
@@ -145,7 +145,7 @@ nodes.update({
   });
 
   nodes.update({
-    id: "219",
+    id: 328,
     shape: 'image',
     image: 'images/BackEnd.png',
     size: 30, // controls image size in pixels
