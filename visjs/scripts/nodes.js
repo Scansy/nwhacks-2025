@@ -66,3 +66,5 @@ network.on("click", function (params) {
 
 // Modify the user's node
 nodes.update({ id: -1, color: { background: 'black' } });
+
+export default nodes;
