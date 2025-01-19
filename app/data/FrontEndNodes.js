@@ -187,42 +187,6 @@ const data = [
     "group": "frontend"
   },
   {
-    "ID": 108,
-    "NodeName": "Relational Databases",
-    "Description": "Covers relational database concepts and SQL for data management.",
-    "from": -1,
-    "x": 111,
-    "y": 192,
-    "group": "frontend"
-  },
-  {
-    "ID": 109,
-    "NodeName": "SQL",
-    "Description": "Introduces SQL for querying and managing relational databases.",
-    "from": 108,
-    "x": 94,
-    "y": 368,
-    "group": "frontend"
-  },
-  {
-    "ID": 110,
-    "NodeName": "MySQL",
-    "Description": "Covers MySQL, an open-source relational database management system.",
-    "from": 109,
-    "x": 203,
-    "y": 401,
-    "group": "frontend"
-  },
-  {
-    "ID": 111,
-    "NodeName": "PostgreSQL",
-    "Description": "Introduces PostgreSQL, an open-source object-relational database system.",
-    "from": 109,
-    "x": 264,
-    "y": 239,
-    "group": "frontend"
-  },
-  {
     "ID": 201,
     "NodeName": "Docker",
     "Description": "Introduces Docker for containerizing applications.",
