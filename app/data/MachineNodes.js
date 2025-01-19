@@ -145,7 +145,7 @@ const data = [
 
       {
         "ID": 616,
-        "NodeName": "Natural Language Processing",
+        "NodeName": "NLP",
         "Description": "Field focused on enabling computers to understand, interpret, and generate human language.",
         "x": -392,
         "y": -397,
@@ -209,8 +209,8 @@ const data = [
         "ID": 623,
         "NodeName": "Machine Learning",
         "Description": "",
-        "x": -151,
-        "y": -291,
+        "x": -123,
+        "y": -276,
         "group": "Machine"
       }
 
