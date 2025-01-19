@@ -1,20 +1,73 @@
-import React from 'react';
-import { ReactFlow } from '@xyflow/react';
- 
+import React, { useCallback, useState, useEffect } from 'react';
+import {
+  ReactFlow,
+  MiniMap,
+  Controls,
+  Background,
+  useNodesState,
+  useEdgesState,
+  addEdge,
+} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
- 
-const initialNodes = [
-  { id: '1', position: { x: 0, y: 0 }, data: { label: '1' } },
-  { id: '2', position: { x: 0, y: 100 }, data: { label: '2' } },
-];
-const initialEdges = [
-  { id: 'e1-2', source: '1', target: '2', style: { stroke: 'red' } }
-];
+import frontendData from '../frontenddata.json';
+
+const mapDataToNodesAndEdges = (data) => {
+  const nodes = [];
+  const edges = [];
+  const traverse = (item, parentId = null) => {
+    nodes.push({
+      id: item.ID.toString(),
+      position: { x: Math.random() * 400, y: Math.random() * 400 },
+      data: { label: item.NodeName },
+    });
+    if (parentId) {
+      edges.push({
+        id: `e${parentId}-${item.ID}`,
+        source: parentId.toString(),
+        target: item.ID.toString(),
+        style: { stroke: 'red' },
+      });
+    }
+    if (item.Subitems) {
+      if (Array.isArray(item.Subitems)) {
+        item.Subitems.forEach(subitem => traverse(subitem, item.ID));
+      } else {
+        Object.values(item.Subitems).forEach(subitem => traverse(subitem, item.ID));
+      }
+    }
+  };
+  traverse(data.HTML);
+  return { nodes, edges };
+};
 
 export default function App() {
+  const [nodes, setNodes, onNodesChange] = useNodesState([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+
+  useEffect(() => {
+    const { nodes, edges } = mapDataToNodesAndEdges(frontendData);
+    setNodes(nodes);
+    setEdges(edges);
+  }, [setNodes, setEdges]);
+
+  const onConnect = useCallback(
+    (params) => setEdges((eds) => addEdge(params, eds)),
+    [setEdges],
+  );
+
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
-      <ReactFlow nodes={initialNodes} edges={initialEdges} />
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onConnect={onConnect}
+      >
+        <MiniMap />
+        <Controls />
+        <Background />
+      </ReactFlow>
     </div>
   );
 }
