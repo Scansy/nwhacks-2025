@@ -191,11 +191,13 @@ nodes.update({
   });
   nodes.update({
     id: 424,
-    shape: 'image',
-    image: 'images/DevOps.png',
+    shape: 'elipse',
     size: 30, // controls image size in pixels
-    label: false,
-    shadow:false
+    label: 'DevOps',
+    font: { face: 'cursive', size: 40 },
+    color: { background: 'white' },
+    borderWidth: 0,
+    shadow: {enabled: false}
   });
 
 var options = {
