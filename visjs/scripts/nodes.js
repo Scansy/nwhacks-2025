@@ -1,37 +1,33 @@
-import nodeData from './nodeData.js';
+import nodeData from './testData.js';
 
 // Function to save current state to localStorage
 function saveCurrentState() {
-    // Save node positions
-    const positions = {};
-    nodes.forEach(node => {
-        const pos = network.getPositions([node.id])[node.id];
-        positions[node.id] = {
-            id: node.id,
-            label: node.label,
-            x: Math.round(pos.x),
-            y: Math.round(pos.y),
-            color: node.color
+    const nodes = network.body.data.nodes.get();
+    const edges = network.body.data.edges.get();
+    const positions = network.getPositions();  // Get all positions at once
+    
+    // Format each node to match the original structure
+    const formattedNodes = nodes.map(node => {
+        const pos = positions[node.id];  // Get position for this specific node
+        return {
+            "ID": node.id,
+            "NodeName": node.label,
+            "Description": node.Description,
+            "from": edges.find(edge => edge.to === node.id)?.from,
+            "x": pos ? Math.round(pos.x) : 0,  // Add fallback if position is undefined
+            "y": pos ? Math.round(pos.y) : 0   // Add fallback if position is undefined
         };
     });
-    
-    // Save edge connections
-    const connections = edges.get().map(edge => ({
-        from: edge.from,
-        to: edge.to,
-        id: edge.id
-    }));
 
-    // Save both to localStorage
-    localStorage.setItem('nodePositions', JSON.stringify(positions, null, 2));
-    localStorage.setItem('edgeConnections', JSON.stringify(connections, null, 2));
-    
-    // Log the saved data
-    console.log('Saved node positions:', positions);
-    console.log('Saved edge connections:', connections);
-    
-    // Show a save confirmation
-    alert('Graph state saved successfully!');
+    // Sort nodes by ID to maintain consistent order
+    formattedNodes.sort((a, b) => a.ID - b.ID);
+
+    // Create the final string in the exact format
+    const finalString = 'const data = ' + JSON.stringify(formattedNodes, null, 2) + ';\n\nexport default data;';
+
+    // Save to localStorage
+    localStorage.setItem('nodeData', finalString);
+    console.log('Saved:', finalString);
 }
 
 // Create save button
@@ -68,9 +64,11 @@ function generateNodes(data) {
         generatedNodes.push({
             id: item.ID,
             label: item.NodeName,
-            title: item.Description,
+            Description: item.Description,
             fixed: false,
             group: "frontend",
+            x: item.x,
+            y: item.y
         });
     });
     return generatedNodes;
