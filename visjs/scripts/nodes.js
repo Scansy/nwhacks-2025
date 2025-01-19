@@ -8,7 +8,8 @@ function generateNodes(data) {
             id: item.ID,
             label: item.NodeName,
             title: item.Description,
-            fixed: true
+            fixed: true,
+            color: { border: '#111', background: '#f0f0f0' },
         });
     });
 
@@ -62,3 +63,6 @@ network.on("click", function (params) {
         nodes.update({ id: nodeId, color: { background: 'red' } });
     }
 });
+
+// Modify the user's node
+nodes.update({ id: -1, color: { background: 'black' } });
