@@ -153,6 +153,7 @@ var options = {
     physics: false,
 };
 
+var completedNodes = [];
 // Initialize network
 var network = new vis.Network(container, data, options);
 
@@ -167,8 +168,9 @@ network.on("click", function (params) {
             <strong>${nodeData.label}</strong><br>
             ${nodeData.title}<br>
             <div class="button-container">
-                <button id="completeButton" class="complete-button">Complete</button>
-                <button id="removeButton" class="remove-button">Remove</button>
+                <button id="completeButton" class="complete-button button">Complete</button>
+                <button id="inProgressButton" class="inProgress-button button">In-Progress</button>
+                <button id="removeButton" class="remove-button button">Remove</button>
             </div>
         `;
 
@@ -176,7 +178,10 @@ network.on("click", function (params) {
         floatingInfo.style.top = `${pointerPos.y + 10}px`;
         floatingInfo.style.display = "block";
 
+        // Add event listeners to the buttons
         document.getElementById('completeButton').addEventListener('click', function () {
+            //add completed nodes id copy to global completed skills array
+            completedNodes.push(nodeId);
             nodes.update({ id: nodeId, color: { background: 'lightgreen' } });
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
@@ -188,6 +193,14 @@ network.on("click", function (params) {
                     }
                 }
             });
+            //display on bottom right number of completed nodes out of total nodes
+            progress.innerHTML = `${completedNodes.length} / ${nodes.length}`;
+        });
+
+        document.getElementById('inProgressButton').addEventListener('click', function () {
+            nodes.update({ id: nodeId, color: { background: 'yellow' } });
+            floatingInfo.style.display = "none";
+
         });
 
         document.getElementById('removeButton').addEventListener('click', function () {
@@ -215,3 +228,6 @@ network.on("dragEnd", function (params) {
 
 // Set initial user node color
 nodes.update({ id: -1, color: { background: 'black' } });
+
+
+export default nodes;
