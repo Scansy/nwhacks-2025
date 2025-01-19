@@ -341,10 +341,12 @@ completedNodes.push(-1);
 
 window.onload = function () {
     let savedData = loadFromClipboardShare();
-    if (savedData != null) {
-        completedNodes = savedData;
+    if (savedData.completedNodes.length > 0 || savedData.inProgressNodes.length > 0) {
+        completedNodes = savedData.completedNodes;
+        inProgressNodes = savedData.inProgressNodes;
+        console.log({ "completedNodes": completedNodes, "inProgressNodes": inProgressNodes });
         nodes.forEach(function (node) {
-            if (completedNodes.includes(node.id)) {
+            if (node.id != -1 && completedNodes.includes(node.id)) {
                 nodes.update({
                     id: node.id,
                     color: { background: 'lightgreen' }
@@ -363,6 +365,11 @@ window.onload = function () {
                             });
                         }
                     }
+                });
+            } else if (node.id != -1 && inProgressNodes.includes(node.id)) {
+                nodes.update({
+                    id: node.id,
+                    color: { background: 'orange' }
                 });
             }
         });

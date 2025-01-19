@@ -3,63 +3,63 @@ const nodes = [
         "ID": 400,
         "NodeName": "Unix",
         "Description": "Family of operating systems that derive from the original AT&T Unix, known for its modularity and multi-user capabilities.",
-        "x": 492,
-        "y": 197,
+        "x": 482,
+        "y": 309,
         "group": "devops"
       },
       {
         "ID": 401,
         "NodeName": "Ubuntu",
         "Description": "Popular Linux distribution based on Debian, widely used in server environments and cloud computing.",
-        "x": 406,
-        "y": 323,
+        "x": 391,
+        "y": 447,
         "group": "devops"
       },
       {
         "ID": 402,
         "NodeName": "FreeBSD",
         "Description": "Advanced Unix-like operating system descended from BSD Unix, known for its reliability and performance.",
-        "x": 451,
-        "y": 338,
+        "x": 383,
+        "y": 225,
         "group": "devops"
       },
       {
         "ID": 403,
         "NodeName": "Vim",
         "Description": "Highly configurable text editor built for efficient text editing and manipulation in terminal environments.",
-        "x": 366,
-        "y": 274,
+        "x": 345,
+        "y": 391,
         "group": "devops"
       },
       {
         "ID": 404,
         "NodeName": "Bash",
         "Description": "Unix shell and command language interpreter, standard shell for Linux and macOS systems.",
-        "x": 323,
-        "y": 254,
+        "x": 315,
+        "y": 292,
         "group": "devops"
       },
       {
         "ID": 405,
         "NodeName": "Monitoring",
         "Description": "Practice of observing systems, collecting metrics, and tracking performance to ensure reliability and stability.",
-        "x": 627,
-        "y": 264,
+        "x": 601,
+        "y": 251,
         "group": "devops"
       },
       {
         "ID": 406,
         "NodeName": "Process",
         "Description": "Instance of a computer program being executed, including its current activity and state information.",
-        "x": 732,
-        "y": 210,
+        "x": 735,
+        "y": 241,
         "group": "devops"
       },
       {
         "ID": 407,
         "NodeName": "Performance",
         "Description": "Measurement and optimization of system resources, response times, and overall efficiency.",
-        "x": 595,
+        "x": 568,
         "y": 173,
         "group": "devops"
       },
@@ -67,16 +67,16 @@ const nodes = [
         "ID": 408,
         "NodeName": "Networking Tools",
         "Description": "Collection of utilities for monitoring, analyzing, and troubleshooting network connections and traffic.",
-        "x": 668,
-        "y": 176,
+        "x": 654,
+        "y": 191,
         "group": "devops"
       },
       {
         "ID": 409,
         "NodeName": "Docker",
         "Description": "Platform for developing, shipping, and running applications in containers for consistent deployment.",
-        "x": 607,
-        "y": 356,
+        "x": 546,
+        "y": 364,
         "group": "devops"
       },
       {
@@ -163,23 +163,23 @@ const nodes = [
         "ID": 420,
         "NodeName": "Cloud",
         "Description": "On-demand delivery of computing resources over the internet with pay-as-you-go pricing.",
-        "x": 578,
-        "y": 449,
+        "x": 560,
+        "y": 446,
         "group": "devops"
       },
       {
         "ID": 421,
         "NodeName": "AWS",
         "Description": "Amazon Web Services, comprehensive cloud computing platform with various services and tools.",
-        "x": 411,
-        "y": 416,
+        "x": 480,
+        "y": 485,
         "group": "devops"
       },
       {
         "ID": 422,
         "NodeName": "Azure",
         "Description": "Microsoft's cloud computing platform providing a wide range of services for building and managing applications.",
-        "x": 527,
+        "x": 593,
         "y": 529,
         "group": "devops"
       },
