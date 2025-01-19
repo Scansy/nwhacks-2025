@@ -365,7 +365,7 @@ network.on("click", function (params) {
                 nodes.update({ id: nodeId, color: { background: '#a378c2', highlight: '#a378c2' } });
             }
             if (nodeData.group === "Machine") {
-                nodes.update({ id: nodeId, color: { background: '#2596be', highlight: '#2180A3' } });
+                nodes.update({ id: nodeId, color: { background: '#ce4760', highlight: '#ce4760' } });
             }
             
             //nodes.update({ id: nodeId, color: { background: '#2696be', highlight: '#2696be' } });
