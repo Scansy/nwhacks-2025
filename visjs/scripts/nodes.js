@@ -50,6 +50,10 @@ var data = {
     edges: edges
 };
 var options = {
+    nodes: {
+        shape: "dot",
+        size: 16,
+    },
     physics: false
 };
 
