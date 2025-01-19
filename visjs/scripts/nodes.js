@@ -70,6 +70,7 @@ function generateNodes(data) {
             x: item.x,
             y: item.y
         });
+        nodeIds.push(item.ID);
     });
     return generatedNodes;
 }
@@ -87,7 +88,14 @@ function generateEdges(data) {
     return generatedEdges;
 }
 
-// Create arrays with nodes and edges
+// TEST
+// console.log(generateNodes(nodeData));
+// console.log(generateEdges(nodeData));
+
+// create an array with nodes.id
+var nodeIds = [];
+
+// create an array with nodes
 var nodes = new vis.DataSet(generateNodes(nodeData));
 var edges = new vis.DataSet(generateEdges(nodeData));
 
@@ -191,8 +199,10 @@ network.on("click", function (params) {
                     }
                 }
             });
-            //display on bottom right number of completed nodes out of total nodes
-            progress.innerHTML = `${completedNodes.length} / ${nodes.length}`;
+
+            // display on bottom right number of completed nodes out of total nodes
+            let progress = document.querySelector("#total");
+            progress.innerHTML = `Total: ${completedNodes.length} / ${nodes.length}`;
         });
 
         document.getElementById('inProgressButton').addEventListener('click', function () {
@@ -228,4 +238,4 @@ network.on("dragEnd", function (params) {
 nodes.update({ id: -1, color: { background: 'black' } });
 
 
-export default nodes;
+export default {nodes, nodeIds, completedNodes};

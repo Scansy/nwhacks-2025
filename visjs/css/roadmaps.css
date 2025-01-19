@@ -1,4 +1,4 @@
-#roadmaps {
+#roadmapBox {
     position: absolute;
     top: 5vh;
     right: 5vh;
@@ -23,10 +23,7 @@
     }
 }
 
-#progress {
-    position: absolute;
-    bottom: 3vh;
-    right: 5vh;
+.progress {
     background-color: #f8f9fa;
     padding: 15px 20px;
     border: 1px solid #dee2e6;
@@ -35,4 +32,19 @@
     font-weight: 600;
     color: #495057;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#roadmap {
+    /* display: none; */
+    margin-bottom: 1em;
+    height: auto;
+}
+
+#progressBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 3vh;
+    right: 5vh;
 }
