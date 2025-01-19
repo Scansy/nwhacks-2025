@@ -4,23 +4,34 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/roadmaps.css">
+    <link rel="stylesheet" href="./css/share.css">
 
-    <script type="module" src="./scripts/nodes.js"></script>
-    <script type="module" src="./scripts/roadmap.js"></script>
+    <script type="module" src="./scripts/nodes.js" defer></script>
+    <script type="module" src="./scripts/roadmap.js" defer></script>
+    <script type="module" src="./scripts/share.js" defer></script>
 </head>
 <body>
 <div id="mynetwork"></div>
 
 <div id="ui">
-    <select id="roadmaps">
+    <select id="roadmapBox">
         <option value="select" selected>Select a path</option>
         <option value="Frontend">Frontend</option>
         <option value="Backend">Backend</option>
         <option value="DevOps">DevOps</option>
     </select>
 
-    <div id="progress">
-        <p></p>
+    <div id="progressBox">
+        <!-- <div id="roadmap" class="progress">
+            <p></p>
+        </div> -->
+        <div id="total" class="progress">
+            <p>Start checking off nodes!</p>
+        </div>
+    </div>
+
+    <div id="share">
+        <button id="shareButton">Share</button>
     </div>
 </div>
 
