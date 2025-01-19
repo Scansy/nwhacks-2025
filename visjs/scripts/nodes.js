@@ -53,6 +53,8 @@ var options = {
     nodes: {
         shape: "dot",
         size: 16,
+        borderWidth: 3,
+        shadow: true
     },
     physics: false
 };
