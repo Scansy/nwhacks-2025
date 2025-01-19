@@ -1,4 +1,5 @@
 import nodeData from './testData.js';
+import edgeData from './edges.js';
 import { saveToClipboardShare, loadFromClipboardShare } from './share.js';
 
 // Function to save current state to localStorage
@@ -22,22 +23,19 @@ function saveCurrentState() {
 
     formattedNodes.sort((a, b) => a.ID - b.ID);
 
-    // Format edges separately
+    // Format edges with simple numeric IDs
     const formattedEdges = edges.map(edge => ({
         "from": edge.from,
         "to": edge.to,
         "id": edge.id
     }));
 
-    // Create the final strings
     const nodesString = 'const data = ' + JSON.stringify(formattedNodes, null, 2) + ';\n\nexport default data;';
     const edgesString = JSON.stringify(formattedEdges, null, 2);
 
-    // Save to localStorage
     localStorage.setItem('nodeData', nodesString);
     localStorage.setItem('edgeData', edgesString);
     
-    // Log both nodes and edges
     console.log('Saved Nodes:', nodesString);
     console.log('Saved Edges:', edgesString);
 }
@@ -86,16 +84,14 @@ function generateNodes(data) {
     });
     return generatedNodes;
 }
-
 function generateEdges(data) {
     const generatedEdges = [];
-    data.forEach((item) => {
-        if (item.from !== undefined) {
-            generatedEdges.push({
-                from: item.from,
-                to: item.ID
-            });
-        }
+    edgeData.forEach((edge) => {
+        generatedEdges.push({
+            from: edge.from,
+            to: edge.to,
+            id: edge.id
+        });
     });
     return generatedEdges;
 }
