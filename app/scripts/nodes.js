@@ -334,18 +334,18 @@ network.on("click", function (params) {
 
             const nodeData = nodes.get(nodeId);
             if (nodeData.group === "devops") {
-                nodes.update({ id: nodeId, color: { background: '#e60707', highlight: '#e60707' } });
+                nodes.update({ id: nodeId, color: { background: '#81adc8', highlight: '#81adc8' } });
             }
             if (nodeData.group === "cybersec") {
-                nodes.update({ id: nodeId, color: { background: '#e5e7e9', highlight: '#909497' } });
+                nodes.update({ id: nodeId, color: { background: '#c97200', highlight: '#c97200' } });
             }
             if (nodeData.group === "backend") {
-                nodes.update({ id: nodeId, color: { background: '#be3bff', highlight: '#7c00ba' } });
+                nodes.update({ id: nodeId, color: { background: '#f5f0c5', highlight: '#f5f0c5' } });
             }
             if (nodeData.group === "frontend") {
-                nodes.update({ id: nodeId, color: { background: '#2596be', highlight: '#2180A3' } });
+                nodes.update({ id: nodeId, color: { background: '#a378c2', highlight: '#a378c2' } });
             }
-            
+        
             //nodes.update({ id: nodeId, color: { background: '#2696be', highlight: '#2696be' } });
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
