@@ -339,8 +339,9 @@ completedNodes.push(-1);
 
 window.onload = function () {
     let savedData = loadFromClipboardShare();
-    if (savedData != null) {
-        completedNodes = savedData;
+    if (savedData.completedNodes.length > 0 && savedData.inProgressNodes.length > 0) {
+        completedNodes = savedData.completedNodes;
+        inProgressNodes = savedData.inProgressNodes;
         nodes.forEach(function (node) {
             if (completedNodes.includes(node.id)) {
                 nodes.update({
