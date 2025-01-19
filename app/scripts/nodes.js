@@ -170,20 +170,24 @@ var data = {
 
 nodes.update({
     id: 218,
-    shape: 'image',
-    image: 'images/frontEnd.png',
+    shape: 'elipse',
     size: 30, // controls image size in pixels
-    label: false,
-    shadow:false
+    label: 'Front-End',
+    font: { face: 'cursive', size: 40 },
+    color: { background: 'white' },
+    borderWidth: 0,
+    shadow: {enabled: false}
   });
 
   nodes.update({
     id: 328,
-    shape: 'image',
-    image: 'images/BackEnd.png',
+    shape: 'elipse',
     size: 30, // controls image size in pixels
-    label: false,
-    shadow:false
+    label: 'Back-End',
+    font: { face: 'cursive', size: 40 },
+    color: { background: 'white' },
+    borderWidth: 0,
+    shadow: {enabled: false}
   });
 
 var options = {
