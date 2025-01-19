@@ -170,20 +170,24 @@ var data = {
 
 nodes.update({
     id: 218,
-    shape: 'image',
-    image: 'images/frontEnd.png',
+    shape: 'elipse',
     size: 30, // controls image size in pixels
-    label: false,
-    shadow: false
-});
+    label: 'Front-End',
+    font: { face: 'cursive', size: 40 },
+    color: { background: 'white' },
+    borderWidth: 0,
+    shadow: {enabled: false}
+  });
 
 nodes.update({
     id: 328,
-    shape: 'image',
-    image: 'images/BackEnd.png',
+    shape: 'elipse',
     size: 30, // controls image size in pixels
-    label: false,
-    shadow:false
+    label: 'Back-End',
+    font: { face: 'cursive', size: 40 },
+    color: { background: 'white' },
+    borderWidth: 0,
+    shadow: {enabled: false}
   });
   nodes.update({
     id: 424,
@@ -335,10 +339,12 @@ completedNodes.push(-1);
 
 window.onload = function () {
     let savedData = loadFromClipboardShare();
-    if (savedData != null) {
-        completedNodes = savedData;
+    if (savedData.completedNodes.length > 0 || savedData.inProgressNodes.length > 0) {
+        completedNodes = savedData.completedNodes;
+        inProgressNodes = savedData.inProgressNodes;
+        console.log({ "completedNodes": completedNodes, "inProgressNodes": inProgressNodes });
         nodes.forEach(function (node) {
-            if (completedNodes.includes(node.id)) {
+            if (node.id != -1 && completedNodes.includes(node.id)) {
                 nodes.update({
                     id: node.id,
                     color: { background: 'lightgreen' }
@@ -357,6 +363,11 @@ window.onload = function () {
                             });
                         }
                     }
+                });
+            } else if (node.id != -1 && inProgressNodes.includes(node.id)) {
+                nodes.update({
+                    id: node.id,
+                    color: { background: 'orange' }
                 });
             }
         });
