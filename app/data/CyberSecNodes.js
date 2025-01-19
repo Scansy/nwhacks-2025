@@ -91,8 +91,8 @@ const cyberSecNodes = [
     "ID": 512,
     "NodeName": "networking",
     "Description": "Knowledge of networking concepts and technologies.",
-    "x": -132,
-    "y": 422,
+    "x": -229,
+    "y": 444,
     "group": "cybersec"
   },
   {
@@ -107,8 +107,8 @@ const cyberSecNodes = [
     "ID": 514,
     "NodeName": "protocols",
     "Description": "Knowledge of various network protocols.",
-    "x": -308,
-    "y": 344,
+    "x": -330,
+    "y": 342,
     "group": "cybersec"
   },
   {
@@ -171,8 +171,8 @@ const cyberSecNodes = [
     "ID": 522,
     "NodeName": "forensics",
     "Description": "Knowledge of digital forensics techniques.",
-    "x": -280,
-    "y": 579,
+    "x": -285,
+    "y": 615,
     "group": "cybersec"
   },
   {
@@ -211,8 +211,8 @@ const cyberSecNodes = [
     "ID": 527,
     "NodeName": "Security Skills",
     "Description": "Understanding of general cybersecurity skills.",
-    "x": -233,
-    "y": 488,
+    "x": -219,
+    "y": 536,
     "group": "cybersec"
   },
   {
@@ -227,8 +227,8 @@ const cyberSecNodes = [
     "ID": 529,
     "NodeName": "Cybersecurity",
     "Description": "",
-    "x": -37,
-    "y": 309,
+    "x": -63,
+    "y": 331,
     "group": "cybersec"
   }
   ];
