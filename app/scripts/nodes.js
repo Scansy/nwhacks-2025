@@ -191,11 +191,13 @@ nodes.update({
   });
   nodes.update({
     id: 424,
-    shape: 'image',
-    image: 'images/DevOps.png',
+    shape: 'elipse',
     size: 30, // controls image size in pixels
-    label: false,
-    shadow:false
+    label: 'DevOps',
+    font: { face: 'cursive', size: 40 },
+    color: { background: 'white' },
+    borderWidth: 0,
+    shadow: {enabled: false}
   });
 
 var options = {
@@ -250,7 +252,8 @@ var options = {
     groups: {
         frontend: { color: { background: '#2596be', border: '#2180A3' } },
         backend: { color: { background: '#be3bff', border: '#7c00ba' } },
-        devops: { color: { background: '#e60707', border: '#4D0000' } }
+        devops: { color: { background: '#e60707', border: '#4D0000' } },
+        cybersec: { color: { background: '#e5e7e9 ', border: '#909497 ' } },
     },
     physics: false,
 
