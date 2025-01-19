@@ -1,5 +1,6 @@
-import nodeData from './testData.js';
-import edgeData from './edges.js';
+import frontEndNodes from '../data/FrontEndNodes.js';
+import FrontEndEdges from '../data/FrontEndEdges.js';
+import backEndNodes from '../data/BackEndNodes.js';
 import { saveToClipboardShare, loadFromClipboardShare } from './share.js';
 
 // Function to save current state to localStorage
@@ -8,36 +9,53 @@ function saveCurrentState() {
     const edges = network.body.data.edges.get();
     const positions = network.getPositions();
     
-    // Format nodes
-    const formattedNodes = nodes.map(node => {
+    // Format nodes and separate by group
+    const frontendNodes = [];
+    const backendNodes = [];
+
+    nodes.forEach(node => {
         const pos = positions[node.id];
-        return {
+        const formattedNode = {
             "ID": node.id,
             "NodeName": node.label,
             "Description": node.Description,
-            "from": edges.find(edge => edge.to === node.id)?.from,
             "x": pos ? Math.round(pos.x) : 0,
-            "y": pos ? Math.round(pos.y) : 0
+            "y": pos ? Math.round(pos.y) : 0,
+            "group": node.group
         };
+
+        // Sort into appropriate arrays based on group
+        if (node.group === 'frontend') {
+            frontendNodes.push(formattedNode);
+        } else if (node.group === 'backend') {
+            backendNodes.push(formattedNode);
+        }
     });
 
-    formattedNodes.sort((a, b) => a.ID - b.ID);
+    // Sort each array by ID
+    frontendNodes.sort((a, b) => a.ID - b.ID);
+    backendNodes.sort((a, b) => a.ID - b.ID);
 
-    // Format edges with simple numeric IDs
+    // Create strings for each file
+    const frontendString = 'const data = ' + JSON.stringify(frontendNodes, null, 2) + ';\n\nexport default data;';
+    const backendString = 'const data = ' + JSON.stringify(backendNodes, null, 2) + ';\n\nexport default data;';
+
+    // Format edges
     const formattedEdges = edges.map(edge => ({
         "from": edge.from,
         "to": edge.to,
         "id": edge.id
     }));
 
-    const nodesString = 'const data = ' + JSON.stringify(formattedNodes, null, 2) + ';\n\nexport default data;';
-    const edgesString = JSON.stringify(formattedEdges, null, 2);
-
-    localStorage.setItem('nodeData', nodesString);
-    localStorage.setItem('edgeData', edgesString);
+    // Save to localStorage
+    localStorage.setItem('frontendNodes', frontendString);
+    localStorage.setItem('backendNodes', backendString);
+    localStorage.setItem('edges', JSON.stringify(formattedEdges, null, 2));
     
-    console.log('Saved Nodes:', nodesString);
-    console.log('Saved Edges:', edgesString);
+    // Log the saved data
+    console.log('Saved Frontend Nodes:', frontendString);
+    console.log('Saved Backend Nodes:', backendString);
+    console.log('Saved Edges:', JSON.stringify(formattedEdges, null, 2));
 }
 
 // Create save button
@@ -68,42 +86,75 @@ saveButton.addEventListener('click', saveCurrentState);
 // Add button to document
 document.body.appendChild(saveButton);
 
-function generateNodes(data) {
-    const generatedNodes = [];
-    data.forEach((item) => {
-        generatedNodes.push({
-            id: item.ID,
-            label: item.NodeName,
-            Description: item.Description,
-            fixed: false,
-            group: item.discipline,
-            x: item.x,
-            y: item.y
-        });
-        nodeIds.push(item.ID);
-    });
-    return generatedNodes;
-}
-function generateEdges(data) {
-    const generatedEdges = [];
-    edgeData.forEach((edge) => {
-        generatedEdges.push({
-            from: edge.from,
-            to: edge.to,
-            id: edge.id
-        });
-    });
-    return generatedEdges;
-}
-
 // create an array with nodes.id
 var nodeIds = [];
 
-// create an array with nodes
-var nodes = new vis.DataSet(generateNodes(nodeData));
-var edges = new vis.DataSet(generateEdges(nodeData));
+function generateNodes(data) {
+    const generatedNodes = [];
+    if (Array.isArray(data)) {
+        data.forEach((item) => {
+            generatedNodes.push({
+                id: item.ID,
+                label: item.NodeName,
+                Description: item.Description,
+                fixed: false,
+                group: item.group,
+                x: item.x,
+                y: item.y
+            });
+            nodeIds.push(item.ID);
+        });
+    }
+    return generatedNodes;
+}
+
+// Then combine the nodes from different sources:
+const allNodes = [
+    ...generateNodes(frontEndNodes),
+    ...generateNodes(backEndNodes),
+];
+
+var nodes = new vis.DataSet(allNodes);
+
+
+function generateEdges() {
+    const generatedEdges = [];
+    // Only process frontend edges if they exist
+    if (FrontEndEdges && Array.isArray(FrontEndEdges)) {
+        FrontEndEdges.forEach((edge) => {
+            generatedEdges.push({
+                from: edge.from,
+                to: edge.to,
+                id: edge.id
+            });
+        });
+    }
+    return generatedEdges;
+}
+
+
+
+
+
+nodes.update({
+    id: "218",
+    shape: 'image',
+    image: 'images/frontEnd.png',
+    size: 30, // controls image size in pixels
+    label: false
+  });
+
+  nodes.update({
+    id: "219",
+    shape: 'image',
+    image: 'images/BackEnd.png',
+    size: 30, // controls image size in pixels
+    label: false
+  });
 
 // Create a network
+var nodes = new vis.DataSet(allNodes);
+var edges = new vis.DataSet(generateEdges());
 var container = document.getElementById('mynetwork');
 
 // Provide the data in the vis format
@@ -118,35 +169,41 @@ var options = {
      },
     manipulation: {
         enabled: true,
-        addNode: function (nodeData, callback) {
-            nodeData.label = prompt("Enter node label:", "New Node");
-            if (nodeData.label) {
-                callback(nodeData);
+        addNode: function (frontEndNodes, callback) {
+            frontEndNodes.label = prompt("Enter node label:", "New Node");
+            if (frontEndNodes.label) {
+                callback(frontEndNodes);
             } else {
                 callback(null);
             }
         },
-        editNode: function (nodeData, callback) {
-            nodeData.label = prompt("Edit node label:", nodeData.label);
-            if (nodeData.label) {
-                callback(nodeData);
+        editNode: function (frontEndNodes, callback) {
+            frontEndNodes.label = prompt("Edit node label:", frontEndNodes.label);
+            if (frontEndNodes.label) {
+                callback(frontEndNodes);
             } else {
                 callback(null);
             }
         },
-        addEdge: function (edgeData, callback) {
-            if (edgeData.from !== edgeData.to) {
-                callback(edgeData);
+        addEdge: function (FrontEndEdges, callback) {
+            if (FrontEndEdges.from !== FrontEndEdges.to) {
+                callback(FrontEndEdges);
             } else {
                 alert("Self-loops are not allowed.");
                 callback(null);
             }
         },
-        editEdge: function (edgeData, callback) {
-            callback(edgeData);
+        editEdge: function (FrontEndEdges, callback) {
+            callback(FrontEndEdges);
         },
         deleteNode: true,
         deleteEdge: true,
+    },
+    edges: {
+        smooth: {
+            type: 'curvedCW',  // clockwise curved edges
+            roundness: 0.2     // adjust from 0 to 1 for curve intensity
+        }
     },
     nodes: {
         shape: "dot",
@@ -161,6 +218,7 @@ var options = {
         DevOps: { color: { background: '#e60707', border: '#4D0000' } }
     },
     physics: false,
+    
 };
 
 var completedNodes = [];
@@ -173,12 +231,12 @@ var network = new vis.Network(container, data, options);
 network.on("click", function (params) {
     if (params.nodes.length > 0) {
         const nodeId = params.nodes[0];
-        const nodeData = nodes.get(nodeId);
+        const frontEndNodes = nodes.get(nodeId);
         const pointerPos = params.pointer.DOM;
 
         floatingInfo.innerHTML = `
-            <strong>${nodeData.label}</strong><br>
-            <div class="popup-desc">${nodeData.Description}<br> </div>
+            <strong>${frontEndNodes.label}</strong><br>
+            <div class="popup-desc">${frontEndNodes.Description}<br> </div>
             <div class="button-container">
                 <button id="completeButton" class="complete-button button">Complete</button>
                 <button id="inProgressButton" class="inProgress-button button">In-Progress</button>
