@@ -1,34 +1,45 @@
-import nodeData from './nodeData.js';
+import nodeData from './testData.js';
 import { saveToClipboardShare, loadFromClipboardShare } from './share.js';
 
 // Function to save current state to localStorage
 function saveCurrentState() {
     const nodes = network.body.data.nodes.get();
     const edges = network.body.data.edges.get();
-    const positions = network.getPositions();  // Get all positions at once
+    const positions = network.getPositions();
     
-    // Format each node to match the original structure
+    // Format nodes
     const formattedNodes = nodes.map(node => {
-        const pos = positions[node.id];  // Get position for this specific node
+        const pos = positions[node.id];
         return {
             "ID": node.id,
             "NodeName": node.label,
             "Description": node.Description,
             "from": edges.find(edge => edge.to === node.id)?.from,
-            "x": pos ? Math.round(pos.x) : 0,  // Add fallback if position is undefined
-            "y": pos ? Math.round(pos.y) : 0   // Add fallback if position is undefined
+            "x": pos ? Math.round(pos.x) : 0,
+            "y": pos ? Math.round(pos.y) : 0
         };
     });
 
-    // Sort nodes by ID to maintain consistent order
     formattedNodes.sort((a, b) => a.ID - b.ID);
 
-    // Create the final string in the exact format
-    const finalString = 'const data = ' + JSON.stringify(formattedNodes, null, 2) + ';\n\nexport default data;';
+    // Format edges separately
+    const formattedEdges = edges.map(edge => ({
+        "from": edge.from,
+        "to": edge.to,
+        "id": edge.id
+    }));
+
+    // Create the final strings
+    const nodesString = 'const data = ' + JSON.stringify(formattedNodes, null, 2) + ';\n\nexport default data;';
+    const edgesString = JSON.stringify(formattedEdges, null, 2);
 
     // Save to localStorage
-    localStorage.setItem('nodeData', finalString);
-    console.log('Saved:', finalString);
+    localStorage.setItem('nodeData', nodesString);
+    localStorage.setItem('edgeData', edgesString);
+    
+    // Log both nodes and edges
+    console.log('Saved Nodes:', nodesString);
+    console.log('Saved Edges:', edgesString);
 }
 
 // Create save button
