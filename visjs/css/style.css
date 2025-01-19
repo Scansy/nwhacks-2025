@@ -11,12 +11,12 @@ body {
 .floating-info {
 position: fixed;
 display: none;
-width: 150px;
+width: 250px;
 padding: 10px;
 background-color: white;
-border: 1px solid black;
-border-radius: 4px;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+/* border: 1px solid black; */
+border-radius: 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
 z-index: 9999;
 color: black;
 }
@@ -27,18 +27,22 @@ color: black;
     margin-top: 10px;
 }
 
-.complete-button {
-    background-color: rgb(52, 185, 112);
+.button {
     color: white;
     padding: 5px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    border: 0px;
+}
+
+.complete-button {
+    background-color: rgb(52, 185, 112);
+}
+
+.inProgress-button {
+    background-color: rgb(219, 181, 29);
 }
 
 .remove-button {
     background-color: rgb(228, 78, 78);
-    color: white;
-    padding: 5px;
-    border-radius: 8px;
-    cursor: pointer;
 }

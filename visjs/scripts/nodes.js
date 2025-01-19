@@ -59,6 +59,8 @@ var options = {
     physics: false
 };
 
+var completedNodes = [];
+
 // initialize your network!
 var network = new vis.Network(container, data, options);
 
@@ -77,9 +79,9 @@ var network = new vis.Network(container, data, options);
             <strong>${nodeData.label}</strong><br>
             ${nodeData.title}<br>
             <div class="button-container">
-                <button id="completeButton" class="complete-button">Complete</button>
-                <button id="inProgressButton" class="inProgress-button">In-Progress</button>
-                <button id="removeButton" class="remove-button">Remove</button>
+                <button id="completeButton" class="complete-button button">Complete</button>
+                <button id="inProgressButton" class="inProgress-button button">In-Progress</button>
+                <button id="removeButton" class="remove-button button">Remove</button>
             </div>
           `;
           
@@ -90,6 +92,8 @@ var network = new vis.Network(container, data, options);
 
         // Add event listeners to the buttons
         document.getElementById('completeButton').addEventListener('click', function () {
+            //add completed nodes to global completed skills array
+            completedNodes.push(nodeId);
             nodes.update({ id: nodeId, color: { background: 'lightgreen' } });
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
