@@ -327,6 +327,11 @@ network.on("click", function (params) {
         // backend: { color: { background: '#be3bff', border: '#7c00ba' } },
         // devops: { color: { background: '#e60707', border: '#4D0000' } },
         // cybersec: { color: { background: '#e5e7e9 ', border: '#909497 ' } },
+            const cindex = completedNodes.indexOf(nodeId);
+            completedNodes.splice(cindex, 1);
+            const pindex = inProgressNodes.indexOf(nodeId);
+            inProgressNodes.splice(pindex, 1);
+
             const nodeData = nodes.get(nodeId);
             if (nodeData.group === "devops") {
                 nodes.update({ id: nodeId, color: { background: '#e60707', highlight: '#e60707' } });
