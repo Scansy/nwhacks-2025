@@ -164,6 +164,7 @@ var options = {
 };
 
 var completedNodes = [];
+var inProgressNodes = [];
 // Initialize network
 var network = new vis.Network(container, data, options);
 // colorCodeNodes();
@@ -177,7 +178,7 @@ network.on("click", function (params) {
 
         floatingInfo.innerHTML = `
             <strong>${nodeData.label}</strong><br>
-            ${nodeData.desc}<br>
+            <div class="popup-desc">${nodeData.Description}<br> </div>
             <div class="button-container">
                 <button id="completeButton" class="complete-button button">Complete</button>
                 <button id="inProgressButton" class="inProgress-button button">In-Progress</button>
@@ -193,14 +194,14 @@ network.on("click", function (params) {
         document.getElementById('completeButton').addEventListener('click', function () {
             //add completed nodes id copy to global completed skills array
             completedNodes.push(nodeId);
-            nodes.update({ id: nodeId, color: { background: 'lightgreen', highlight: 'lightgreen' } });
+            nodes.update({ id: nodeId, color: { background: 'lightgreen', highlight: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
             floatingInfo.style.display = "none";
             edges.forEach(function (edge) {
                 if (edge.from === nodeId || edge.to === nodeId) {
                     var otherNodeId = edge.from === nodeId ? edge.to : edge.from;
                     var otherNode = nodes.get(otherNodeId);
                     if (otherNode.color && otherNode.color.background === 'lightgreen') {
-                        edges.update({id: edge.id,  color: {color: 'limegreen', highlight: 'limegreen'}, shadow: {enabled: true, color: 'lime', size: 15}});
+                        edges.update({id: edge.id,  color: {color: 'limegreen', highlight: 'limegreen'}, shadow: {enabled: true, color: 'lime', size: 20}, width: 2});
                     }
                 }
             });
@@ -211,6 +212,7 @@ network.on("click", function (params) {
         });
 
         document.getElementById('inProgressButton').addEventListener('click', function () {
+            inProgressNodes.push(nodeId);
             nodes.update({ id: nodeId, color: { background: 'orange', highlight: 'Orange' } });
             floatingInfo.style.display = "none";
 
@@ -266,10 +268,20 @@ nodes.update({ id: -1, color: { background: 'black' } });
 window.onload = function () {
     let savedData = loadFromClipboardShare();
     if (savedData != null) {
+        // TODO: add inprogress nodes saved data
         completedNodes = savedData;
         nodes.forEach(function (node) {
             if (completedNodes.includes(node.id)) {
                 nodes.update({ id: node.id, color: { background: 'lightgreen' } });
+                edges.forEach(function (edge) {
+                    if (edge.from === nodeId || edge.to === nodeId) {
+                        var otherNodeId = edge.from === nodeId ? edge.to : edge.from;
+                        var otherNode = nodes.get(otherNodeId);
+                        if (otherNode.color && otherNode.color.background === 'lightgreen') {
+                            edges.update({id: edge.id,  color: {color: 'limegreen', highlight: 'limegreen'}, shadow: {enabled: true, color: 'lime', size: 20}, width: 2});
+                        }
+                    }
+                });
             }
         });
     }
@@ -278,4 +290,4 @@ document.getElementById('shareButton').addEventListener('click', function () {
     saveToClipboardShare(completedNodes);
 });
 
-export default {nodes, nodeIds, completedNodes};
+export default {nodes, nodeIds, completedNodes, inProgressNodes};

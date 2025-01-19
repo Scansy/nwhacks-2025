@@ -9,6 +9,7 @@ body {
 }
 
 .floating-info {
+font-family: Arial, sans-serif;
 position: fixed;
 display: none;
 width: 250px;
@@ -19,6 +20,10 @@ border-radius: 10px;
 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
 z-index: 9999;
 color: black;
+}
+
+.popup-desc {
+    margin-top: 5px;
 }
 
 .button-container {
