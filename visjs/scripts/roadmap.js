@@ -2,6 +2,7 @@ import nodeData from './nodes.js';
 const nodes = nodeData.nodes;
 const nodeIds= nodeData.nodeIds;
 const completedNodes = nodeData.completedNodes;
+const inProgressNodes = nodeData.inProgressNodes;
 
 const frontendId = [];
 for (let i = 1; i < 101; i++) {
@@ -30,21 +31,30 @@ document.getElementById("roadmapBox").addEventListener("change", () => {
         frontendId.forEach(id => {
             nodes.update({ id: id, color: { background: 'lightblue', border: 'blue' }, shadow: {enabled: true, color: "rgba(39, 143, 245, 1)", size: 100}, borderWidth: 2});
             if (completedNodes.includes(id)) {
-                nodes.update({ id: id, color: { background: 'lightgreen' }});
+                nodes.update({ id: id, color: { background: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
+            }
+            if (inProgressNodes.includes(id)) {
+                nodes.update({ id: id, color: { background: 'orange' }, shadow: {enabled: true, color: "rgb(245, 183, 39)", size: 100}, borderWidth: 2});
             }
         });
     } else if (val === "Backend") {
         backendId.forEach(id => {
             nodes.update({ id: id, color: { background: 'lightblue', border: 'blue' }, shadow: {enabled: true, color: "rgba(39, 143, 245, 1)", size: 100}, borderWidth: 2});
             if (completedNodes.includes(id)) {
-                nodes.update({ id: id, color: { background: 'lightgreen' }});
+                nodes.update({ id: id, color: { background: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
+            }
+            if (inProgressNodes.includes(id)) {
+                nodes.update({ id: id, color: { background: 'orange' }, shadow: {enabled: true, color: "rgb(245, 183, 39)", size: 100}, borderWidth: 2});
             }
         });
     } else if (val === "DevOps") {
         devopsId.forEach(id => {
             nodes.update({ id: id, color: { background: 'lightblue', border: 'blue' }, shadow: {enabled: true, color: "rgba(39, 143, 245, 1)", size: 100}, borderWidth: 2});
             if (completedNodes.includes(id)) {
-                nodes.update({ id: id, color: { background: 'lightgreen' }});
+                nodes.update({ id: id, color: { background: 'lightgreen' }, shadow: {enabled: true, color: "rgb(39, 245, 63)", size: 100}, borderWidth: 2});
+            }
+            if (inProgressNodes.includes(id)) {
+                nodes.update({ id: id, color: { background: 'orange' }, shadow: {enabled: true, color: "rgb(245, 183, 39)", size: 100}, borderWidth: 2});
             }
         });
     }
@@ -57,7 +67,7 @@ document.getElementById("roadmapBox").addEventListener("change", () => {
 
 function clearHighlight() {
     nodeIds.forEach(id => {
-        if (nodeIds.includes(id) && !completedNodes.includes(id)) {
+        if (nodeIds.includes(id) && !completedNodes.includes(id) && !inProgressNodes.includes(id)) {
             nodes.update({ id: id, color: { background: '#2596be' }, shadow: {enabled: false}, borderWidth: 1});
         }
     });
