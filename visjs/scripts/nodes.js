@@ -177,7 +177,7 @@ network.on("click", function (params) {
 
         floatingInfo.innerHTML = `
             <strong>${nodeData.label}</strong><br>
-            ${nodeData.Description}<br>
+            <div class="popup-desc">${nodeData.Description}<br> </div>
             <div class="button-container">
                 <button id="completeButton" class="complete-button button">Complete</button>
                 <button id="inProgressButton" class="inProgress-button button">In-Progress</button>
