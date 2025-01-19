@@ -136,21 +136,7 @@ function generateEdges() {
 
 
 
-nodes.update({
-    id: 218,
-    shape: 'image',
-    image: 'images/frontEnd.png',
-    size: 30, // controls image size in pixels
-    label: false
-  });
 
-  nodes.update({
-    id: 328,
-    shape: 'image',
-    image: 'images/BackEnd.png',
-    size: 30, // controls image size in pixels
-    label: false
-  });
 
 // Create a network
 var nodes = new vis.DataSet(allNodes);
@@ -162,6 +148,24 @@ var data = {
     nodes: nodes,
     edges: edges
 };
+
+nodes.update({
+    id: 218,
+    shape: 'image',
+    image: 'images/frontEnd.png',
+    size: 30, // controls image size in pixels
+    label: false,
+    shadow:false
+  });
+
+  nodes.update({
+    id: 328,
+    shape: 'image',
+    image: 'images/BackEnd.png',
+    size: 30, // controls image size in pixels
+    label: false,
+    shadow:false
+  });
 
 var options = {
     interaction: {
