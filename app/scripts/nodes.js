@@ -93,6 +93,7 @@ function generateNodes(data) {
     const generatedNodes = [];
     if (Array.isArray(data)) {
         data.forEach((item) => {
+            console.log(item.group);
             generatedNodes.push({
                 id: item.ID,
                 label: item.NodeName,
@@ -213,9 +214,9 @@ var options = {
         font: { color: "black" }
     },
     groups: {
-        Frontend: { color: { background: '#2596be', border: '#2180A3' } },
-        Backend: { color: { background: '#be3bff', border: '#7c00ba' } },
-        DevOps: { color: { background: '#e60707', border: '#4D0000' } }
+        frontend: { color: { background: '#2596be', border: '#2180A3' } },
+        backend: { color: { background: '#be3bff', border: '#7c00ba' } },
+        devops: { color: { background: '#e60707', border: '#4D0000' } }
     },
     physics: false,
     
@@ -225,7 +226,6 @@ var completedNodes = [];
 var inProgressNodes = [];
 // Initialize network
 var network = new vis.Network(container, data, options);
-// colorCodeNodes();
 
 // Event listener for node clicks
 network.on("click", function (params) {
@@ -302,41 +302,29 @@ network.on("dragEnd", function (params) {
 nodes.update({ id: -1, color: { background: 'lightgreen' } });
 completedNodes.push(-1);
 
-// color code nodes
-// function colorCodeNodes() {
-//     const allNodes = nodes.get();
-    
-//     allNodes.forEach((node) => {
-//         console.log(`Processing node ${node.id}:`, {
-//             group: node.group,
-//             currentColor: node.color
-//         });
-        
-//         let newColor = null;
-//         if (node.group === "Frontend") {
-//             newColor = { background: '#2596be', border: '#2180A3' };
-//         } else if (node.group === 'Backend') {
-//             newColor = { background: '#9932CC', border: '#1e3333' };
-//         } else if (node.group === 'DevOps') {
-//             newColor = { background: '#800000', border: '#4D0000' };
-//         }
-//     });
-// }
 
 window.onload = function () {
     let savedData = loadFromClipboardShare();
     if (savedData != null) {
-        // TODO: add inprogress nodes saved data
         completedNodes = savedData;
         nodes.forEach(function (node) {
             if (completedNodes.includes(node.id)) {
-                nodes.update({ id: node.id, color: { background: 'lightgreen' } });
+                nodes.update({
+                    id: node.id,
+                    color: { background: 'lightgreen' }
+                });
+
                 edges.forEach(function (edge) {
-                    if (edge.from === nodeId || edge.to === nodeId) {
-                        var otherNodeId = edge.from === nodeId ? edge.to : edge.from;
-                        var otherNode = nodes.get(otherNodeId);
+                    if (edge.from === node.id || edge.to === node.id) {
+                        const otherNodeId = edge.from === node.id ? edge.to : edge.from;
+                        const otherNode = nodes.get(otherNodeId);
                         if (otherNode.color && otherNode.color.background === 'lightgreen') {
-                            edges.update({id: edge.id,  color: {color: 'limegreen', highlight: 'limegreen'}, shadow: {enabled: true, color: 'lime', size: 20}, width: 2});
+                            edges.update({
+                                id: edge.id,
+                                color: { color: 'limegreen', highlight: 'limegreen' },
+                                shadow: { enabled: true, color: 'lime', size: 20 },
+                                width: 2
+                            });
                         }
                     }
                 });
