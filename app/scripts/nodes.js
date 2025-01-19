@@ -82,7 +82,7 @@ function saveCurrentState() {
 }
 
 // Create save button
-const saveButton = document.createElement('button');
+/* const saveButton = document.createElement('button');
 saveButton.innerHTML = 'Save Graph State';
 saveButton.style.position = 'fixed';
 saveButton.style.bottom = '20px';
@@ -107,7 +107,7 @@ saveButton.addEventListener('mouseout', function () {
 saveButton.addEventListener('click', saveCurrentState);
 
 // Add button to document
-document.body.appendChild(saveButton);
+document.body.appendChild(saveButton); */
 
 // create an array with nodes.id
 var nodeIds = [];
@@ -232,7 +232,7 @@ var options = {
     interaction: {
         selectConnectedEdges: false
     },
-    manipulation: {
+    /* manipulation: {
         enabled: true,
         addNode: function (frontEndNodes, callback) {
             frontEndNodes.label = prompt("Enter node label:", "New Node");
@@ -263,7 +263,7 @@ var options = {
         },
         deleteNode: true,
         deleteEdge: true,
-    },
+    }, */
     edges: {
         smooth: {
             type: 'curvedCW',  // clockwise curved edges
